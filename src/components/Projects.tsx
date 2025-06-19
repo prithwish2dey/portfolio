@@ -288,7 +288,7 @@ const Projects = () => {
       title: "PaediPrime",
       description: "AI-powered pediatric healthcare with real time prediction.",
       tech: ["ANN", "XGBoost", "Flask"],
-      image: "/images/paediprime.png",
+      image: "/images/paediprime.jpeg",
       link: "https://www.paediprime.tech",
       category: "AI/ML",
     },

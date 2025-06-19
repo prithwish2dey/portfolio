@@ -16,7 +16,7 @@ const importantSkills = [
   },
   {
     name: "Qiskit",
-    logo: "https://raw.githubusercontent.com/qiskit-community/community.qiskit.org/main/static/images/logos/qiskit-logo-purple.svg"
+    logo: "/images/qiskit.png"
   },
   {
     name: "Unity",
@@ -32,7 +32,7 @@ const importantSkills = [
   },
   {
     name: "Flask",
-    logo: "/logos3d/flask.svg"
+    logo: "/images/flask.png"
   },
   {
     name: "React",
