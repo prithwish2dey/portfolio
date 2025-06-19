@@ -146,7 +146,7 @@ const Hero = () => {
 
 
           <p className="text-sm md:text-base text-gray-300">
-            Computer Science undergraduate at <span className="text-cyan-400">IIIT Kalyani</span>.<br />
+            CSE Student at <span className="text-cyan-400">IIIT Kalyani</span>.<br />
             Passionate about building the future with emerging technologies.
           </p>
 

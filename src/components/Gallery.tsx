@@ -50,24 +50,31 @@
 
 
 
-
-
 import React, { useState } from "react";
 
 const images = [
-  // { src: "/gallery/paper-presentation.jpg", caption: "Paper Presentation - ICSP 2024" },
   { src: "/images/sc1.jpg", caption: "Winner of STATUS CODE 1 Hackathon (Wildlife Track Prize )" },
   { src: "/images/quantum-workshop.jpg", caption: "2nd Place in Intra College 200m Race" },
   { src: "/images/Thesis2.jpeg", caption: "B.Tech. 3rd Year Project Thesis Submission" },
-  // { src: "/gallery/project-showcase.jpg", caption: "Final Year Project Showcase" },
+  
 ];
 
 const Gallery = () => {
   const [selectedImage, setSelectedImage] = useState<null | typeof images[0]>(null);
 
   return (
-    <section id="gallery" className="py-24 px-4 bg-black text-white">
-      <div className="max-w-6xl mx-auto text-center mb-20">
+    <section
+      id="gallery"
+      className="relative w-full py-24 px-4 text-white bg-cover bg-center bg-no-repeat"
+      style={{
+        backgroundImage: "url('/backgrounds/backgallery.png')",
+      }}
+    >
+      {/* Dark overlay to dim background image */}
+      <div className="absolute inset-0 bg-black/60 z-0"></div>
+
+      {/* Section content */}
+      <div className="relative z-10 max-w-6xl mx-auto text-center mb-20">
         <h2 className="text-4xl md:text-5xl font-bold mb-4 glow-text">
           Project <span className="text-cyan-400">Gallery</span>
         </h2>
@@ -76,14 +83,15 @@ const Gallery = () => {
         </p>
       </div>
 
-      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10 max-w-6xl mx-auto">
+      {/* Gallery Grid */}
+      <div className="relative z-10 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10 max-w-6xl mx-auto">
         {images.map((img, i) => (
           <div
             key={i}
             onClick={() => setSelectedImage(img)}
             className="relative group cursor-pointer overflow-hidden rounded-xl border border-cyan-500/20 shadow-lg transition-transform duration-300 hover:scale-105"
           >
-            {/* Glow effect on hover */}
+            {/* Glow on hover */}
             <div className="absolute inset-0 z-10 bg-cyan-400 opacity-0 group-hover:opacity-20 blur-2xl transition-opacity duration-500 pointer-events-none"></div>
 
             {/* Image */}

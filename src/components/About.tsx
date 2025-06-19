@@ -270,6 +270,14 @@ const About = () => {
         {/* Social Links */}
 <div className="flex flex-wrap justify-center gap-4 mb-12">
   <a
+    href="https://drive.google.com/file/d/14F1cFQa-8GuQVVvRNAFL9nkZGpVCo-19/view?usp=sharing"
+    target="_blank"
+    rel="noopener noreferrer"
+    className="px-4 py-2 border border-primary/30 rounded-full text-sm hover:border-primary hover:text-cyan-400 transition-all glow-effect"
+  >
+    Resume
+  </a>
+  <a
     href="https://github.com/prithwish2dey"
     target="_blank"
     rel="noopener noreferrer"
@@ -284,14 +292,6 @@ const About = () => {
     className="px-4 py-2 border border-primary/30 rounded-full text-sm hover:border-primary hover:text-cyan-400 transition-all glow-effect"
   >
     LinkedIn
-  </a>
-  <a
-    href="/PrithwishDey_Resume.pdf"
-    target="_blank"
-    rel="noopener noreferrer"
-    className="px-4 py-2 border border-primary/30 rounded-full text-sm hover:border-primary hover:text-cyan-400 transition-all glow-effect"
-  >
-    Resume
   </a>
   <a
     href="https://www.codechef.com/users/dey_prithwish"
@@ -309,6 +309,14 @@ const About = () => {
   >
     LeetCode
   </a>
+  <a    
+    href="https://drive.google.com/file/d/11wv_kpxouELQrELUVXyHD19MQfumTUEq/view?usp=sharing"
+    target="_blank"
+    rel="noopener noreferrer"
+    className="px-4 py-2 border border-primary/30 rounded-full text-sm hover:border-primary hover:text-cyan-400 transition-all glow-effect"
+  >
+    Certifications
+  </a>
 </div>
 
 
@@ -319,8 +327,7 @@ const About = () => {
               <div className="gradient-border-content p-8 rounded-lg bg-card/50 backdrop-blur-md">
                 <h3 className="text-2xl font-bold mb-4 text-primary">Who I Am</h3>
                 <p className="text-muted-foreground leading-relaxed mb-4">
-                  I'm a passionate Computer Science undergraduate at IIIT Kalyani, with a strong academic record 
-                  and a keen interest in cutting-edge technologies like Quantum Computing, AI/ML, Generative AI, 
+                  I'm a passionate Computer Science and Engineering Student at <span className="text-primary">IIIT Kalyani</span> and a keen interest in cutting-edge technologies like AI/ML, Generative AI, LLMs, Quantum Machine Learning, Quantum Cryptography
                   and Mixed Reality.
                 </p>
                 <p className="text-muted-foreground leading-relaxed mb-4">

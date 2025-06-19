@@ -272,16 +272,13 @@
 
 
 
-
-
 import { ExternalLink } from "lucide-react";
-import { Button } from "@/components/ui/button";
 
 const Projects = () => {
   const projects = [
     {
       title: "Hybrid Quantum Model for DR Detection",
-      description: "Comparision between Classical between Quantum Transfer Learning methods for diabetic retinopathy detection.",
+      description: "Comparision between Classical and Quantum Transfer Learning methods for diabetic retinopathy detection.",
       tech: ["Python", "Qiskit", "PennyLane", "Torch", "OpenCV"],
       image: "/images/quantum.png",
       link: null,
@@ -316,48 +313,46 @@ const Projects = () => {
           <h3 className="text-xl font-semibold text-cyan-300">{project.title}</h3>
           <p className="text-sm text-gray-300">{project.description}</p>
           <div className="flex flex-wrap gap-1 text-[11px]">
-            {project.tech.slice(0, 10).map((tech: string, i: number) => (
+            {project.tech.map((tech: string, i: number) => (
               <span key={i} className="bg-cyan-400/10 text-cyan-300 px-2 py-0.5 rounded-full border border-cyan-300/20">
                 {tech}
               </span>
             ))}
           </div>
-          {/* {project.link && (
-            <Button
-              asChild
-              size="sm"
-              className="mt-2 text-xs bg-cyan-600 hover:bg-cyan-700 text-white"
-            >
-              <a href={project.link} target="_blank" rel="noopener noreferrer">
-                <ExternalLink className="w-3 h-3 mr-1" />
-                Demo
-              </a>
-            </Button>
-          )} */}
 
-
-            <div className="flex justify-center mt-3">
+          {/* Demo Button */}
+          <div className="flex justify-center mt-4">
             <a
               href={project.link || "#"}
               target="_blank"
               rel="noopener noreferrer"
-              className={`inline-flex items-center gap-1 px-3 py-1.5 text-xs rounded-md transition mt-6 
-              ${project.link ? "bg-cyan-600 hover:bg-cyan-700 text-white" : "bg-gray-500 text-gray-300 cursor-not-allowed"}`}
+              className={`inline-flex items-center gap-1 px-3 py-1.5 text-xs rounded-md transition 
+                ${project.link
+                  ? "bg-cyan-600 hover:bg-cyan-700 text-white"
+                  : "bg-gray-600 text-gray-300 cursor-not-allowed"}`}
             >
-            <ExternalLink className="w-3 h-3" />
-            Demo
+              <ExternalLink className="w-3 h-3" />
+              Demo
             </a>
-</div>
-
-
+          </div>
         </div>
       </div>
     </div>
   );
 
   return (
-    <section className="py-24 px-4 bg-black text-white" id="projects">
-      <div className="max-w-7xl mx-auto text-center mb-20">
+    <section
+      id="projects"
+      className="relative w-full py-24 px-4 text-white bg-cover bg-center bg-no-repeat"
+      style={{
+        backgroundImage: "url('/backgrounds/backprojects.jpg')",
+      }}
+    >
+      {/* Dark overlay */}
+      <div className="absolute inset-0 bg-black/60 z-0"></div>
+
+      {/* Content */}
+      <div className="relative z-10 max-w-7xl mx-auto text-center mb-20">
         <h2 className="text-4xl md:text-5xl font-bold mb-4 glow-text">
           Innovative <span className="text-cyan-400">Projects</span>
         </h2>
@@ -367,14 +362,14 @@ const Projects = () => {
       </div>
 
       {/* Diamond Layout */}
-      <div className="flex flex-col items-center space-y-24">
-        {/* Top Row: Two diamonds side by side */}
+      <div className="relative z-10 flex flex-col items-center space-y-24">
+        {/* Top Row: Two diamonds */}
         <div className="flex flex-wrap justify-center gap-24">
           <DiamondCard project={projects[0]} />
           <DiamondCard project={projects[1]} />
         </div>
 
-        {/* Bottom Row: One centered diamond */}
+        {/* Bottom Row: Centered */}
         <div className="mt-[-4rem]">
           <DiamondCard project={projects[2]} />
         </div>

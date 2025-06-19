@@ -1,4 +1,3 @@
-
 import { useState } from 'react';
 import { Card } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
@@ -6,6 +5,7 @@ import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
 import { Mail, Github, Linkedin, ArrowUp } from "lucide-react";
 import { useToast } from "@/hooks/use-toast";
+import VisitorMap from "@/components/VisitorMap"; // 👈 Map component
 
 const Contact = () => {
   const [formData, setFormData] = useState({
@@ -14,6 +14,7 @@ const Contact = () => {
     subject: '',
     message: '',
   });
+
   const { toast } = useToast();
 
   const handleInputChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
@@ -23,20 +24,18 @@ const Contact = () => {
 
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
-    
-    // Create mailto link with form data
+
     const mailtoLink = `mailto:prithwish2dey@gmail.com?subject=${encodeURIComponent(formData.subject)}&body=${encodeURIComponent(
       `Name: ${formData.name}\nEmail: ${formData.email}\n\nMessage:\n${formData.message}`
     )}`;
-    
+
     window.location.href = mailtoLink;
-    
+
     toast({
       title: "Opening email client...",
       description: "Your default email client will open with the message pre-filled.",
     });
 
-    // Reset form
     setFormData({ name: '', email: '', subject: '', message: '' });
   };
 
@@ -62,15 +61,44 @@ const Contact = () => {
   ];
 
   return (
-    <div className="container mx-auto px-6">
-      <div className="max-w-6xl mx-auto pt-24">
-        <h2 className="text-4xl md:text-5xl font-bold text-center mb-12 glow-text">
-          Get In <span className="text-primary">Touch</span>
-        </h2>
+    // <section
+    //   id="contact"
+    //   className="relative w-full py-24 px-6 text-white bg-cover bg-center bg-no-repeat"
+    //   style={{
+    //     backgroundImage: "url('/backgrounds/backcontact.jpg')", // make sure this path is correct
+    //   }}
+    // >
+
+
+      // <div className="max-w-6xl mx-auto">
+      //   <h2 className="text-4xl md:text-5xl font-bold text-center mb-12 glow-text">
+      //     Get In <span className="text-primary">Touch</span>
+      //   </h2>
+
+
+
+      <section
+  id="contact"
+  className="relative w-full py-24 px-6 text-white overflow-hidden"
+>
+  {/* Background Image Layer with Brightness Filter */}
+  <div
+    className="absolute inset-0 bg-center bg-cover brightness-50"
+    style={{
+      backgroundImage: "url('/backgrounds/backcontact.jpg')",
+      zIndex: 0,
+    }}
+  />
+
+  {/* Foreground Content */}
+  <div className="relative z-10 max-w-6xl mx-auto">
+    <h2 className="text-4xl md:text-5xl font-bold text-center mb-12 glow-text">
+      Get In <span className="text-primary">Touch</span>
+    </h2>
 
         <div className="grid lg:grid-cols-2 gap-12">
           {/* Contact Form */}
-          <Card className="p-8 bg-card/50 border-primary/20 hover:border-primary/50 transition-all hover:glow-effect">
+          <Card className="p-8 bg-black/60 border-primary/20 hover:border-primary/50 transition-all hover:glow-effect">
             <h3 className="text-2xl font-bold mb-6 text-primary">Send Me a Message</h3>
             <form onSubmit={handleSubmit} className="space-y-6">
               <div className="grid md:grid-cols-2 gap-4">
@@ -142,59 +170,53 @@ const Contact = () => {
             </form>
           </Card>
 
-          {/* Contact Information */}
+          {/* Contact Info Section */}
           <div className="space-y-8">
             <div>
               <h3 className="text-2xl font-bold mb-6 text-primary">Let's Connect</h3>
               <p className="text-muted-foreground leading-relaxed mb-8">
                 I'm always excited to discuss new opportunities, collaborate on innovative projects, 
-                or simply chat about the latest developments in AI, Quantum Computing, and Mixed Reality. 
+                or simply chat about the latest developments in GenAI, Quantum Computing, and Mixed Reality. 
                 Feel free to reach out!
               </p>
             </div>
 
-            {/* Contact Cards */}
+            {/* Show only clickable label links */}
             <div className="space-y-4">
               {contactInfo.map((info, index) => (
                 <Card 
                   key={index}
-                  className="p-6 bg-card/50 border-primary/20 hover:border-primary/50 transition-all hover:glow-effect group"
+                  className="p-4 bg-black/60 border-primary/20 hover:border-primary/50 transition-all hover:glow-effect group"
                 >
                   <a 
                     href={info.link}
                     target={info.link.startsWith('mailto:') ? undefined : '_blank'}
                     rel={info.link.startsWith('mailto:') ? undefined : 'noopener noreferrer'}
-                    className="flex items-center space-x-4 group-hover:text-primary transition-colors"
+                    className="flex items-center space-x-3 group-hover:text-primary transition-colors"
                   >
-                    <div className="p-3 bg-primary/10 rounded-lg group-hover:bg-primary/20 transition-colors">
-                      <info.icon className="h-6 w-6 text-primary" />
+                    <div className="p-2 bg-primary/10 rounded-lg group-hover:bg-primary/20 transition-colors">
+                      <info.icon className="h-5 w-5 text-primary" />
                     </div>
-                    <div>
-                      <div className="font-medium">{info.label}</div>
-                      <div className="text-sm text-muted-foreground group-hover:text-primary/80">
-                        {info.value}
-                      </div>
-                    </div>
+                    <div className="text-base font-medium">{info.label}</div>
                     <ArrowUp className="h-4 w-4 ml-auto rotate-45 opacity-0 group-hover:opacity-100 transition-opacity" />
                   </a>
                 </Card>
               ))}
             </div>
 
-            {/* Additional info */}
-            <Card className="p-6 bg-card/50 border-primary/20 hover:border-primary/50 transition-all">
+            <Card className="p-6 bg-black/60 border-primary/20 hover:border-primary/50 transition-all">
               <h4 className="font-bold mb-3 text-primary">Quick Facts</h4>
               <ul className="space-y-2 text-muted-foreground">
-                <li>📍 Based in Kalyani, West Bengal, India</li>
-                <li>📱 Phone: +91-9382646714</li>
+                <li>📍 Arambagh, West Bengal, India</li>
                 <li>🎓 Currently studying at IIIT Kalyani</li>
-                <li>🔬 Actively researching at IISc Bangalore</li>
+                <li>🔬 Actively researching on Technologies</li>
               </ul>
             </Card>
           </div>
         </div>
+        <VisitorMap />
       </div>
-    </div>
+    </section>
   );
 };
 
