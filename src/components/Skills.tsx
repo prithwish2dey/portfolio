@@ -75,7 +75,7 @@ const Skills = () => {
       <div className="absolute inset-0 bg-black bg-opacity-70 z-0" />
 
       {/* Content */}
-      <div className="relative z-10 w-full max-w-7xl flex flex-col items-center justify-center pt-10">
+      <div className="relative z-10 w-full max-w-7xl flex flex-col items-center justify-center mt-8 md:mt-16">
         <h2 className="text-4xl md:text-5xl font-bold mb-4 glow-text text-center">
           My <span className="text-primary">Skills</span>
         </h2>
@@ -84,7 +84,7 @@ const Skills = () => {
         <div
           ref={containerRef}
           className={`relative perspective-1000 flex items-start justify-end
-            ${isMobile ? "w-[300px] h-[300px] translate-x-[130px] translate-y-[150px]" : "w-[500px] h-[500px] translate-x-[250px] translate-y-[250px]"}`}
+            ${isMobile ? "w-[300px] h-[800px] translate-x-[130px] translate-y-[250px]" : "w-[500px] h-[500px] translate-x-[250px] translate-y-[250px]"}`}
         >
           <motion.div
             className="relative"
