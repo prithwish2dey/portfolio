@@ -84,7 +84,7 @@ const Skills = () => {
         <div
           ref={containerRef}
           className={`relative perspective-1000 flex items-start justify-end
-            ${isMobile ? "w-[300px] h-[300px] translate-x-[150px] translate-y-[150px]" : "w-[500px] h-[500px] translate-x-[250px] translate-y-[250px]"}`}
+            ${isMobile ? "w-[300px] h-[300px] translate-x-[130px] translate-y-[150px]" : "w-[500px] h-[500px] translate-x-[250px] translate-y-[250px]"}`}
         >
           <motion.div
             className="relative"
