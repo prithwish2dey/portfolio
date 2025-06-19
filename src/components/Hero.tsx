@@ -103,12 +103,12 @@ const Hero = () => {
 
           {/* Left: Profile Image */}
 <div className="w-full md:w-1/2 flex justify-center animate-float-up">
-  <div className="relative w-96 h-96">
+  <div className="relative w-60 h-60 sm:w-72 sm:h-72 md:w-96 md:h-96">
     {/* Glowing background */}
     <div className="absolute inset-0 rounded-full bg-gradient-to-br from-cyan-300 via-blue-500 to-blue-400 blur-2xl opacity-100 animate-pulse z-0" />
 
     {/* Profile Image */}
-    <div className="relative z-10 w-full h-full rounded-full bg-gradient-to-br from-cyan-500 to-blue-600 p-2 shadow-2xl transform hover:scale-105 transition duration-500 ease-in-out">
+    <div className="relative z-10 w-full h-full rounded-full bg-gradient-to-br from-cyan-500 to-blue-600 p-1 sm:p-2 shadow-2xl transform hover:scale-105 transition duration-500 ease-in-out">
       <img
         src="/images/profile.png"
         alt="Prithwish Dey"
@@ -120,46 +120,43 @@ const Hero = () => {
 
 
 
+
         {/* Right: Name + Tagline + Button */}
-        <div className="w-full md:w-1/2 text-center md:text-left text-white space-y-6 animate-fade-in">
-          <h1 className="text-6xl font-extrabold leading-tight flex flex-wrap justify-center md:justify-start gap-x-2 gap-y-2 text-center md:text-left glow-text">
-            <span className="text-white hover:text-cyan-400 transition duration-300">Prithwish</span>
-            <span className="text-cyan-400">Dey</span>
-          </h1>
+<div className="w-full md:w-1/2 text-center md:text-left text-white space-y-6 animate-fade-in">
+  <h1 className="text-4xl sm:text-5xl md:text-6xl font-extrabold leading-tight flex flex-wrap justify-center md:justify-start gap-x-2 gap-y-2 text-center md:text-left glow-text">
+    <span className="text-white hover:text-cyan-400 transition duration-300">Prithwish</span>
+    <span className="text-cyan-400">Dey</span>
+  </h1>
 
+  <p className="text-base sm:text-lg md:text-xl font-light min-h-[2.5rem] transition-opacity duration-500 ease-in-out">
+    {isTyping ? (
+      <>
+        {displayText}
+        <span className="animate-pulse">|</span>
+      </>
+    ) : (
+      taglines[taglineIndex].highlighted
+    )}
+  </p>
 
-          {/* <p className="text-lg md:text-xl font-light min-h-[2.5rem]">
-            {displayText}
-            {isTyping && <span className="animate-pulse">|</span>}
-          </p> */}
-          <p className="text-lg md:text-xl font-light min-h-[2.5rem] transition-opacity duration-500 ease-in-out">
-            {isTyping ? (
-            <>
-            {displayText}
-            <span className="animate-pulse">|</span>
-            </>
-            ) : (
-                  taglines[taglineIndex].highlighted
-                )}
-          </p>
+  <p className="text-sm md:text-base text-gray-300">
+    CSE Student at <span className="text-cyan-400">IIIT Kalyani</span>.<br />
+    Passionate about building the future with emerging technologies.
+  </p>
 
+  <div className="flex justify-center md:justify-start">
+    <Button
+      variant="ghost"
+      size="sm"
+      onClick={scrollToAbout}
+      className="flex items-center gap-2 text-white hover:text-cyan-400 hover:scale-105 transition duration-300"
+    >
+      <ArrowDown className="h-5 w-5" />
+      <span className="text-sm">Discover More</span>
+    </Button>
+  </div>
+</div>
 
-
-          <p className="text-sm md:text-base text-gray-300">
-            CSE Student at <span className="text-cyan-400">IIIT Kalyani</span>.<br />
-            Passionate about building the future with emerging technologies.
-          </p>
-
-          <Button
-            variant="ghost"
-            size="sm"
-            onClick={scrollToAbout}
-            className="flex items-center gap-2 text-white hover:text-cyan-400 hover:scale-105 transition duration-300"
-          >
-            <ArrowDown className="h-5 w-5" />
-            <span className="text-sm">Discover More</span>
-          </Button>
-        </div>
       </div>
       
     </section>

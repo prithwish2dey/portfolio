@@ -303,7 +303,7 @@ const Projects = () => {
   ];
 
   const DiamondCard = ({ project }: { project: any }) => (
-    <div className="relative w-80 h-80 sm:w-96 sm:h-[420px] transform rotate-45 hover:scale-105 transition-transform duration-500">
+    <div className="relative w-72 h-[500px] sm:w-96 sm:h-[420px] transform rotate-45 hover:scale-105 transition-transform duration-500">
       <div className="absolute inset-0 transform -rotate-45 rounded-2xl overflow-hidden bg-gradient-to-br from-black via-gray-900 to-black border border-cyan-400/30 shadow-[0_0_30px_rgba(0,255,255,0.3)] hover:shadow-[0_0_60px_rgba(0,255,255,0.6)] transition-shadow duration-500 text-white">
         {/* Image */}
         <img src={project.image} alt={project.title} className="w-full h-40 object-cover" />
@@ -326,7 +326,7 @@ const Projects = () => {
               href={project.link || "#"}
               target="_blank"
               rel="noopener noreferrer"
-              className={`inline-flex items-center gap-1 px-3 py-1.5 text-xs rounded-md transition 
+              className={`inline-flex items-center gap-1 px-3 py-1.5 text-xs rounded-md transition mt-6
                 ${project.link
                   ? "bg-cyan-600 hover:bg-cyan-700 text-white"
                   : "bg-gray-600 text-gray-300 cursor-not-allowed"}`}

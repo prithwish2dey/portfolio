@@ -324,11 +324,11 @@ const About = () => {
           {/* Bio Section */}
           <div className="space-y-6">
             <div className="gradient-border rounded-lg">
-              <div className="gradient-border-content p-8 rounded-lg bg-card/50 backdrop-blur-md">
-                <h3 className="text-2xl font-bold mb-4 text-primary">Who I Am</h3>
-                <p className="text-muted-foreground leading-relaxed mb-4">
-                  I'm a passionate Computer Science and Engineering Student at <span className="text-primary">IIIT Kalyani</span> and a keen interest in cutting-edge technologies like AI/ML, Generative AI, LLMs, Quantum Machine Learning, Quantum Cryptography
-                  and Mixed Reality.
+              <div className="gradient-border-content p-4 sm:p-6 md:p-8 rounded-lg bg-card/50 backdrop-blur-md">
+                <h3 className="text-xl sm:text-2xl font-bold mb-4 text-primary">Who I Am</h3>
+                  <p className="text-sm sm:text-base text-muted-foreground leading-relaxed mb-4">
+                    I'm a passionate Computer Science and Engineering Student at <span className="text-primary">IIIT Kalyani</span> and a keen interest in cutting-edge technologies like AI/ML, Generative AI, LLMs, Quantum Machine Learning, Quantum Cryptography
+                    and Mixed Reality.
                 </p>
                 <p className="text-muted-foreground leading-relaxed mb-4">
                   Known for innovative projects like <span className="text-primary">WildGuard360</span> and 
@@ -345,31 +345,33 @@ const About = () => {
           </div>
 
           {/* Quick Stats - 2-1 Circle Layout with Links */}
-          <div className="flex flex-col items-center gap-10">
-            {/* Top Row: 2 Circles */}
-            <div className="flex justify-center gap-14">
-              <a href="#education" className="group">
-                <Card className="w-40 h-40 rounded-full flex flex-col items-center justify-center text-center bg-card/60 border-primary/30 hover:border-primary/60 hover:scale-105 transition-all duration-300 hover:glow-effect backdrop-blur-md">
-                  <div className="text-3xl font-bold text-primary group-hover:text-cyan-400 transition-colors">9.87</div>
-                  <div className="text-sm text-muted-foreground mt-1">CGPA</div>
-                </Card>
-              </a>
-              <a href="#experience" className="group">
-                <Card className="w-40 h-40 rounded-full flex flex-col items-center justify-center text-center bg-card/60 border-primary/30 hover:border-primary/60 hover:scale-105 transition-all duration-300 hover:glow-effect backdrop-blur-md">
-                  <div className="text-3xl font-bold text-primary group-hover:text-cyan-400 transition-colors">2</div>
-                  <div className="text-sm text-muted-foreground mt-1 text-center">Research Internships</div>
-                </Card>
-              </a>
-            </div>
+          {/* Quick Stats - 2-1 Circle Layout with Links */}
+<div className="flex flex-col items-center gap-10">
+  {/* Top Row: 2 Circles */}
+  <div className="flex flex-wrap justify-center gap-8 sm:gap-14">
+    <a href="#education" className="group">
+      <Card className="w-32 h-32 sm:w-40 sm:h-40 rounded-full flex flex-col items-center justify-center text-center bg-card/60 border-primary/30 hover:border-primary/60 hover:scale-105 transition-all duration-300 hover:glow-effect backdrop-blur-md">
+        <div className="text-2xl sm:text-3xl font-bold text-primary group-hover:text-cyan-400 transition-colors">9.87</div>
+        <div className="text-xs sm:text-sm text-muted-foreground mt-1">CGPA</div>
+      </Card>
+    </a>
+    <a href="#experience" className="group">
+      <Card className="w-32 h-32 sm:w-40 sm:h-40 rounded-full flex flex-col items-center justify-center text-center bg-card/60 border-primary/30 hover:border-primary/60 hover:scale-105 transition-all duration-300 hover:glow-effect backdrop-blur-md">
+        <div className="text-2xl sm:text-3xl font-bold text-primary group-hover:text-cyan-400 transition-colors">2</div>
+        <div className="text-xs sm:text-sm text-muted-foreground mt-1 text-center">Research Internships</div>
+      </Card>
+    </a>
+  </div>
 
-            {/* Bottom Row: Centered Circle */}
-            <a href="#projects" className="group">
-              <Card className="w-40 h-40 rounded-full flex flex-col items-center justify-center text-center bg-card/60 border-primary/30 hover:border-primary/60 hover:scale-105 transition-all duration-300 hover:glow-effect backdrop-blur-md">
-                <div className="text-3xl font-bold text-primary group-hover:text-cyan-400 transition-colors">3+</div>
-                <div className="text-sm text-muted-foreground mt-1 text-center">Major Projects</div>
-              </Card>
-            </a>
-          </div>
+  {/* Bottom Row: Centered Circle */}
+  <a href="#projects" className="group">
+    <Card className="w-32 h-32 sm:w-40 sm:h-40 rounded-full flex flex-col items-center justify-center text-center bg-card/60 border-primary/30 hover:border-primary/60 hover:scale-105 transition-all duration-300 hover:glow-effect backdrop-blur-md">
+      <div className="text-2xl sm:text-3xl font-bold text-primary group-hover:text-cyan-400 transition-colors">3+</div>
+      <div className="text-xs sm:text-sm text-muted-foreground mt-1 text-center">Major Projects</div>
+    </Card>
+  </a>
+</div>
+
         </div>
 
         {/* Education & Experience */}
