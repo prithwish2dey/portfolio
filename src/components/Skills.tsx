@@ -104,7 +104,7 @@ const Skills = () => {
     >
       <div className="absolute inset-0 bg-black bg-opacity-70 z-0" />
 
-      <div className="relative z-10 w-full max-w-7xl flex flex-col items-center justify-center pt-6">
+      <div className="relative z-10 w-full max-w-7xl flex flex-col items-center justify-center pt-10">
         <h2 className="text-4xl md:text-5xl font-bold mb-4 glow-text">
           My <span className="text-primary">Skills</span>
         </h2>
