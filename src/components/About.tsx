@@ -213,7 +213,7 @@ const About = () => {
       degree: "B.Tech, Computer Science",
       institution: "IIIT Kalyani",
       period: "2022–2026",
-      grade: "CGPA: 9.86",
+      grade: "CGPA: 9.87",
       image: "/images/IIITK.png"
     },
     {
