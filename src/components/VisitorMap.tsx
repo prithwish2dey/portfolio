@@ -1,7 +1,7 @@
 const VisitorMap = () => {
   return (
     <div className="w-full flex flex-col items-center mt-8">
-      <h3 className="text-lg font-semibold text-cyan-400 mb-2">
+      <h3 className="text-2xl font-semibold text-cyan-400 mb-3">
         Visitors on the Page - Thank you for visiting the page!!
       </h3>
 

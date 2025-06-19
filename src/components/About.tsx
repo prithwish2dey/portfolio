@@ -254,7 +254,7 @@ const About = () => {
       id="about"
       className="relative w-full py-20 px-6 text-white bg-cover bg-center bg-no-repeat"
       style={{
-        backgroundImage: "url('/backgrounds/backabout.png')",
+        backgroundImage: "url('/backgrounds/backabout.webp')",
       }}
     >
       {/* Overlay */}
