@@ -144,16 +144,12 @@ const Hero = () => {
     Passionate about building the future with emerging technologies.
   </p>
 
-  <div className="flex justify-center md:justify-start animate-float-up relative">
-  {/* Glowing Background */}
-  <div className="absolute inset-0 rounded-full bg-gradient-to-r from-cyan-400 to-blue-500 blur-xl opacity-70 animate-pulse z-0 w-40 h-12 mx-auto" />
-
-  {/* Floating + Glowing Button */}
+  <div className="flex justify-center md:justify-start animate-float-up">
   <Button
     variant="ghost"
     size="sm"
     onClick={scrollToAbout}
-    className="relative z-10 flex items-center gap-2 text-white hover:text-cyan-400 hover:scale-105 transition duration-300"
+    className="relative flex items-center gap-2 px-6 py-2 border border-cyan-400 text-cyan-400 font-semibold rounded-full shadow-[0_0_15px_#22d3ee] hover:shadow-[0_0_25px_#22d3ee] transition duration-300"
   >
     <ArrowDown className="h-5 w-5" />
     <span className="text-sm">Discover More</span>
