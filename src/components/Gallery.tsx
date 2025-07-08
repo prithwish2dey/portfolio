@@ -56,6 +56,12 @@ const images = [
   { src: "/images/sc1.jpg", caption: "Winner of STATUS CODE 1 Hackathon (Wildlife Track Prize )" },
   { src: "/images/200m.jpg", caption: "2nd Place in Intra College 200m Race" },
   { src: "/images/Thesis2.jpeg", caption: "B.Tech. 3rd Year Project Thesis Submission" },
+  { src: "/images/sc1.jpg", caption: "Winner of STATUS CODE 1 Hackathon (Wildlife Track Prize )" },
+  { src: "/images/200m.jpg", caption: "2nd Place in Intra College 200m Race" },
+  { src: "/images/Thesis2.jpeg", caption: "B.Tech. 3rd Year Project Thesis Submission" },
+  { src: "/images/sc1.jpg", caption: "Winner of STATUS CODE 1 Hackathon (Wildlife Track Prize )" },
+  { src: "/images/200m.jpg", caption: "2nd Place in Intra College 200m Race" },
+  { src: "/images/Thesis2.jpeg", caption: "B.Tech. 3rd Year Project Thesis Submission" },
   
 ];
 
