@@ -53,15 +53,15 @@
 import React, { useState } from "react";
 
 const images = [
-  { src: "/images/sc1.jpg", caption: "Winner of STATUS CODE 1 Hackathon (Wildlife Track Prize )" },
-  { src: "/images/200m.jpg", caption: "2nd Place in Intra College 200m Race" },
+  { src: "/images/sirs.jpeg", caption: "With Prof. Pradipta Biswas and Indian Astronaut Delegate, Group Captian Ajit Krishnan" },
+  {src: "/images/sc1.jpg", caption: "Winner of STATUS CODE 1 Hackathon (Wildlife Track Prize )"},
+  { src: "/images/IISc.jpeg", caption: "Internship at IISc Bangalore" },
   { src: "/images/Thesis2.jpeg", caption: "B.Tech. 3rd Year Project Thesis Submission" },
-  { src: "/images/sc1.jpg", caption: "Winner of STATUS CODE 1 Hackathon (Wildlife Track Prize )" },
+  { src: "/images/user_study.jpeg", caption: "User Study of Human-Drone Interaction" },
   { src: "/images/200m.jpg", caption: "2nd Place in Intra College 200m Race" },
-  { src: "/images/Thesis2.jpeg", caption: "B.Tech. 3rd Year Project Thesis Submission" },
-  { src: "/images/sc1.jpg", caption: "Winner of STATUS CODE 1 Hackathon (Wildlife Track Prize )" },
-  { src: "/images/200m.jpg", caption: "2nd Place in Intra College 200m Race" },
-  { src: "/images/Thesis2.jpeg", caption: "B.Tech. 3rd Year Project Thesis Submission" },
+  { src: "/images/IISc_convocation.jpg", caption: "IISc Convocation 2024" },
+  { src: "/images/NAL_cricket2.png", caption: "I3D Lab Vs NAL Cricket Match, 2024" },
+  { src: "/images/IISc_cricket2.jpg", caption: "IISc Cricket Match, 2025" },
   
 ];
 
