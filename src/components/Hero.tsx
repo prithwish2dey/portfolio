@@ -110,7 +110,7 @@ const Hero = () => {
     {/* Profile Image */}
     <div className="relative z-10 w-full h-full rounded-full bg-gradient-to-br from-cyan-500 to-blue-600 p-1 sm:p-2 shadow-2xl transform hover:scale-105 transition duration-500 ease-in-out">
       <img
-        src="/images/profile.png"
+        src="/images/profile10.png"
         alt="Prithwish Dey"
         className="w-full h-full rounded-full object-cover"
       />
