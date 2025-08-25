@@ -131,6 +131,7 @@ import Publications from "@/components/Publications";
 import Gallery from "@/components/Gallery";
 import Navigation from "@/components/Navigation";
 import VisitorMap from "@/components/VisitorMap"; // 👈 Map component
+import LikeViewCounter from '@/components/likeCounter'; // 👈 Like/View counter component
 
 const Index = () => {
   const [activeSection, setActiveSection] = useState('home');
@@ -195,6 +196,11 @@ const Index = () => {
         <section id="contact" className="py-0">
           <Contact />
         </section>
+
+         <section id="LikeViewCounter" className="py-0">
+          <LikeViewCounter />
+        </section>
+
       </main>
 
       <footer className="border-t border-border/50 bg-card/50 backdrop-blur-sm">
