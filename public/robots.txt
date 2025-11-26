@@ -12,3 +12,5 @@ Allow: /
 
 User-agent: *
 Allow: /
+
+sitemap: https://prithwishdey-portfolio.vercel.app/sitemap.xml
