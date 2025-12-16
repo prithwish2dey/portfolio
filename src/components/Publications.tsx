@@ -81,74 +81,198 @@
 
 
 
+// import React from "react";
+// import { ExternalLink } from "lucide-react";
+// import { Button } from "@/components/ui/button";
+// import { motion } from "framer-motion";
+
+// const publications = [
+//   {
+//     title: "A Quantum Public Key Cryptographic Scheme using Entangled States and Grover Operator",
+//     authors: ["Soumen Bajpayee", "Sarbani Sen", "Prithwish Dey", "Dr. Imon Mukherjee"],
+//     conference: "ICSP Conference 2024",
+//     publisher: "Springer Book Chapter",
+//     link: "https://link.springer.com/chapter/10.1007/978-3-031-90587-2_12",
+//     summary:
+//       "A novel framework combining Quantum Transfer Learning and classical convolutional networks to improve diabetic retinopathy classification.",
+//   },
+//   // Add more papers here if needed
+// ];
+
+// const Publications = () => {
+//   return (
+//     <section
+//   id="publications"
+//   className="relative w-full py-24 px-6 text-white bg-cover bg-center bg-no-repeat"
+//   style={{
+//     backgroundImage: "url('/backgrounds/backpublication.webp')",
+//   }}
+// >
+//   {/* Dark overlay */}
+//   <div className="absolute inset-0 bg-black/70 z-0"></div>
+
+//   {/* Main content on top of overlay */}
+//   <div className="relative z-10 max-w-6xl mx-auto text-center mb-20">
+//     <motion.h2
+//       initial={{ opacity: 0, y: 40 }}
+//       whileInView={{ opacity: 1, y: 0 }}
+//       transition={{ duration: 0.6 }}
+//       className="text-4xl md:text-5xl font-bold mb-4 glow-text"
+//     >
+//       Research <span className="text-cyan-400">Publications</span>
+//     </motion.h2>
+//     <motion.p
+//       initial={{ opacity: 0 }}
+//       whileInView={{ opacity: 1 }}
+//       transition={{ delay: 0.3 }}
+//       className="text-gray-400 text-lg max-w-3xl mx-auto"
+//     >
+//       Peer-reviewed contributions in Quantum Cryptography.
+//     </motion.p>
+//   </div>
+
+//   {/* Cards */}
+//   <div className="relative z-10 space-y-16 max-w-4xl mx-auto">
+//     {publications.map((pub, index) => (
+//       <motion.div
+//         key={index}
+//         initial={{ opacity: 0, y: 30 }}
+//         whileInView={{ opacity: 1, y: 0 }}
+//         transition={{ duration: 0.5, delay: index * 0.2 }}
+//         className="bg-gradient-to-br from-gray-900 to-gray-800 rounded-xl p-8 shadow-xl border border-cyan-500/20 hover:border-cyan-400/40 transition duration-300"
+//       >
+//         <h3 className="text-2xl font-semibold text-cyan-300 mb-2">{pub.title}</h3>
+//         <p className="text-sm text-gray-400 mb-1">
+//           <span className="italic">Authors:</span> {pub.authors.join(", ")}
+//         </p>
+//         <p className="text-sm text-gray-400 mb-2 italic">
+//           {pub.conference} • {pub.publisher}
+//         </p>
+//         <p className="text-gray-300 mb-4">{pub.summary}</p>
+//         <Button
+//           variant="outline"
+//           className="text-xs border-cyan-400 text-cyan-300 hover:bg-cyan-500/10"
+//           asChild
+//         >
+//           <a href={pub.link} target="_blank" rel="noopener noreferrer">
+//             <ExternalLink className="w-4 h-4 mr-1" />
+//             Read Paper
+//           </a>
+//         </Button>
+//       </motion.div>
+//     ))}
+//   </div>
+// </section>
+
+//   );
+// };
+
+// export default Publications;
+
+
+
+
+
+
+
+
+
+
+
+
 import React from "react";
 import { ExternalLink } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { motion } from "framer-motion";
 
-const publications = [
+/* ---------------- DATA ---------------- */
+
+const journalPublications = [
   {
-    title: "A Quantum Public Key Cryptographic Scheme using Entangled States and Grover Operator",
-    authors: ["Soumen Bajpayee", "Sarbani Sen", "Prithwish Dey", "Dr. Imon Mukherjee"],
+    title: "Studying Human Modality Preferences in a Human-Drone Framework for Secondary Task Selection",
+    authors: ["Suprakas Saren", "Rubini Mariyappan", "Prithwish Dey", "Debasish Ghose", "Pradipta Biswas"],
+    journal: "Journal on Multimodal User Interfaces",
+    publisher: "Springer",
+    link: "https://link.springer.com/article/10.1007/s12193-025-00462-3",
+    // summary: "Short summary of the journal paper.",
+  },
+];
+
+const conferencePublications = [
+  {
+    title:
+      "A Quantum Public Key Cryptographic Scheme using Entangled States and Grover Operator",
+    authors: [
+      "Soumen Bajpayee",
+      "Sarbani Sen",
+      "Prithwish Dey",
+      "Dr. Imon Mukherjee",
+    ],
     conference: "ICSP Conference 2024",
     publisher: "Springer Book Chapter",
     link: "https://link.springer.com/chapter/10.1007/978-3-031-90587-2_12",
-    summary:
-      "A novel framework combining Quantum Transfer Learning and classical convolutional networks to improve diabetic retinopathy classification.",
+    // summary:
+    //   "A novel framework combining Quantum Transfer Learning and classical convolutional networks to improve diabetic retinopathy classification.",
   },
-  // Add more papers here if needed
+  {
+    title:
+      "LLaVA-TB: A Large Language and Vision Assistant for Tuberculosis Detection from Chest X-Rays",
+    authors: [
+      "Zaina Akhter",
+      "Iffat Jabin",
+      "Prithwish Dey",
+      "Mukund Mitra",
+      "Dr. Abhishek Mukhopadhyay",
+    ],
+    conference: "CVIP Conference 2025",
+    publisher: "Springer Book Chapter",
+    link: "#",
+    // summary:
+    //   "A novel framework combining Quantum Transfer Learning and classical convolutional networks to improve diabetic retinopathy classification.",
+  },
 ];
 
-const Publications = () => {
-  return (
-    <section
-  id="publications"
-  className="relative w-full py-24 px-6 text-white bg-cover bg-center bg-no-repeat"
-  style={{
-    backgroundImage: "url('/backgrounds/backpublication.webp')",
-  }}
->
-  {/* Dark overlay */}
-  <div className="absolute inset-0 bg-black/70 z-0"></div>
+/* ------------- REUSABLE COLUMN ------------- */
 
-  {/* Main content on top of overlay */}
-  <div className="relative z-10 max-w-6xl mx-auto text-center mb-20">
-    <motion.h2
-      initial={{ opacity: 0, y: 40 }}
+const PublicationColumn = ({
+  title,
+  publications,
+}: {
+  title: string;
+  publications: any[];
+}) => (
+  <div className="space-y-10">
+    <motion.h3
+      initial={{ opacity: 0, y: 30 }}
       whileInView={{ opacity: 1, y: 0 }}
-      transition={{ duration: 0.6 }}
-      className="text-4xl md:text-5xl font-bold mb-4 glow-text"
+      transition={{ duration: 0.5 }}
+      className="text-3xl font-bold text-cyan-400 text-center"
     >
-      Research <span className="text-cyan-400">Publications</span>
-    </motion.h2>
-    <motion.p
-      initial={{ opacity: 0 }}
-      whileInView={{ opacity: 1 }}
-      transition={{ delay: 0.3 }}
-      className="text-gray-400 text-lg max-w-3xl mx-auto"
-    >
-      Peer-reviewed contributions in Quantum Cryptography.
-    </motion.p>
-  </div>
+      {title}
+    </motion.h3>
 
-  {/* Cards */}
-  <div className="relative z-10 space-y-16 max-w-4xl mx-auto">
     {publications.map((pub, index) => (
       <motion.div
         key={index}
         initial={{ opacity: 0, y: 30 }}
         whileInView={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.5, delay: index * 0.2 }}
-        className="bg-gradient-to-br from-gray-900 to-gray-800 rounded-xl p-8 shadow-xl border border-cyan-500/20 hover:border-cyan-400/40 transition duration-300"
+        className="bg-gradient-to-br from-gray-900 to-gray-800 rounded-xl p-6 shadow-xl border border-cyan-500/20 hover:border-cyan-400/40 transition"
       >
-        <h3 className="text-2xl font-semibold text-cyan-300 mb-2">{pub.title}</h3>
-        <p className="text-sm text-gray-400 mb-1">
+        <h4 className="text-lg font-semibold text-cyan-300 mb-2">
+          {pub.title}
+        </h4>
+
+        <p className="text-xs text-gray-400 mb-1">
           <span className="italic">Authors:</span> {pub.authors.join(", ")}
         </p>
-        <p className="text-sm text-gray-400 mb-2 italic">
-          {pub.conference} • {pub.publisher}
+
+        <p className="text-xs text-gray-400 italic mb-2">
+          {pub.conference || pub.journal} • {pub.publisher}
         </p>
-        <p className="text-gray-300 mb-4">{pub.summary}</p>
+
+        <p className="text-sm text-gray-300 mb-4">{pub.summary}</p>
+
         <Button
           variant="outline"
           className="text-xs border-cyan-400 text-cyan-300 hover:bg-cyan-500/10"
@@ -162,8 +286,48 @@ const Publications = () => {
       </motion.div>
     ))}
   </div>
-</section>
+);
 
+/* ---------------- MAIN ---------------- */
+
+const Publications = () => {
+  return (
+    <section
+      id="publications"
+      className="relative w-full py-24 px-6 text-white bg-cover bg-center"
+      style={{ backgroundImage: "url('/backgrounds/backpublication.webp')" }}
+    >
+      <div className="absolute inset-0 bg-black/70 z-0" />
+
+      <div className="relative z-10 max-w-6xl mx-auto space-y-20">
+        {/* Header */}
+        <div className="text-center">
+          <motion.h2
+            initial={{ opacity: 0, y: 40 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.6 }}
+            className="text-4xl md:text-5xl font-bold mb-4"
+          >
+            Research <span className="text-cyan-400">Publications</span>
+          </motion.h2>
+          <p className="text-gray-400 text-lg">
+            Peer-reviewed contributions in Quantum Cryptography
+          </p>
+        </div>
+
+        {/* Columns */}
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-12">
+          <PublicationColumn
+            title="Conference Publications"
+            publications={conferencePublications}
+          />
+          <PublicationColumn
+            title="Journal Publications"
+            publications={journalPublications}
+          />
+        </div>
+      </div>
+    </section>
   );
 };
 
