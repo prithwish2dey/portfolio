@@ -56,13 +56,15 @@ const images = [
   { src: "/images/sirs.jpeg", caption: "With Prof. Pradipta Biswas and Indian Astronaut Delegate, Group Captian Ajit Krishnan" },
   {src: "/images/sc1.jpg", caption: "Winner of STATUS CODE 1 Hackathon (Wildlife Track Prize )"},
   { src: "/images/IISc4.jpg", caption: "Internship at IISc Bangalore" },
+  { src: "/images/CVIP_1.jpeg", caption: "With Prof. Anil K. Jain" },
+  { src: "/images/CVIP_2.jpeg", caption: "CVIP 2025 PosterPresentation" },
+  { src: "/images/CVIP_3.jpeg", caption: "CVIP 2025 Paper Presentation" },
   { src: "/images/Thesis2.jpeg", caption: "B.Tech. 3rd Year Project Thesis Submission" },
   { src: "/images/user_study.jpeg", caption: "User Study of Human-Drone Interaction" },
   { src: "/images/200m.jpg", caption: "2nd Place in Intra College 200m Race" },
   { src: "/images/IISc_convocation.jpg", caption: "IISc Convocation 2024" },
   { src: "/images/NAL_cricket2.png", caption: "I3D Lab Vs NAL Cricket Match, 2024" },
-  { src: "/images/IISc_cricket2.jpg", caption: "IISc Cricket Match, 2025" },
-  
+  { src: "/images/IISc_cricket2.jpg", caption: "IISc Cricket Match, 2025" }
 ];
 
 const Gallery = () => {
