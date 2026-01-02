@@ -1,3 +1,5 @@
+
+
 // import { Card } from "@/components/ui/card";
 
 // const About = () => {
@@ -6,7 +8,7 @@
 //       degree: "B.Tech, Computer Science",
 //       institution: "IIIT Kalyani",
 //       period: "2022–2026",
-//       grade: "CGPA: 9.86",
+//       grade: "CGPA: 9.89",
 //       image: "/images/IIITK.png"
 //     },
 //     {
@@ -47,28 +49,81 @@
 //       id="about"
 //       className="relative w-full py-20 px-6 text-white bg-cover bg-center bg-no-repeat"
 //       style={{
-//         backgroundImage: "url('/backgrounds/backabout.png')",
+//         backgroundImage: "url('/backgrounds/backabout.webp')",
 //       }}
 //     >
 //       {/* Overlay */}
 //       <div className="absolute inset-0 bg-black bg-opacity-80"></div>
 
 //       {/* Content */}
-//       <div className="relative z-10 max-w-7xl mx-auto">
-//         <h2 className="text-4xl md:text-5xl font-bold text-center mb-16 glow-text">
+//       <div className="relative z-10 max-w-7xl mx-auto pt-4">
+//         <h2 className="text-4xl md:text-5xl font-bold text-center mb-6 glow-text">
 //           About <span className="text-primary">Me</span>
 //         </h2>
+
+
+//         {/* Social Links */}
+// <div className="flex flex-wrap justify-center gap-4 mb-12">
+//   <a
+//     href="https://drive.google.com/file/d/14F1cFQa-8GuQVVvRNAFL9nkZGpVCo-19/view?usp=sharing"
+//     target="_blank"
+//     rel="noopener noreferrer"
+//     className="px-4 py-2 border border-primary/30 rounded-full text-sm hover:border-primary hover:text-cyan-400 transition-all glow-effect"
+//   >
+//     Resume
+//   </a>
+//   <a
+//     href="https://github.com/prithwish2dey"
+//     target="_blank"
+//     rel="noopener noreferrer"
+//     className="px-4 py-2 border border-primary/30 rounded-full text-sm hover:border-primary hover:text-cyan-400 transition-all glow-effect"
+//   >
+//     GitHub
+//   </a>
+//   <a
+//     href="https://www.linkedin.com/in/prithwish-dey-4655a8236/"
+//     target="_blank"
+//     rel="noopener noreferrer"
+//     className="px-4 py-2 border border-primary/30 rounded-full text-sm hover:border-primary hover:text-cyan-400 transition-all glow-effect"
+//   >
+//     LinkedIn
+//   </a>
+//   <a
+//     href="https://www.codechef.com/users/dey_prithwish"
+//     target="_blank"
+//     rel="noopener noreferrer"
+//     className="px-4 py-2 border border-primary/30 rounded-full text-sm hover:border-primary hover:text-cyan-400 transition-all glow-effect"
+//   >
+//     CodeChef
+//   </a>
+//   <a
+//     href="https://leetcode.com/u/Prithwish2Dey"
+//     target="_blank"
+//     rel="noopener noreferrer"
+//     className="px-4 py-2 border border-primary/30 rounded-full text-sm hover:border-primary hover:text-cyan-400 transition-all glow-effect"
+//   >
+//     LeetCode
+//   </a>
+//   <a    
+//     href="https://drive.google.com/file/d/11wv_kpxouELQrELUVXyHD19MQfumTUEq/view?usp=sharing"
+//     target="_blank"
+//     rel="noopener noreferrer"
+//     className="px-4 py-2 border border-primary/30 rounded-full text-sm hover:border-primary hover:text-cyan-400 transition-all glow-effect"
+//   >
+//     Certifications
+//   </a>
+// </div>
+
 
 //         <div className="grid lg:grid-cols-2 gap-12 mb-16">
 //           {/* Bio Section */}
 //           <div className="space-y-6">
 //             <div className="gradient-border rounded-lg">
-//               <div className="gradient-border-content p-8 rounded-lg bg-card/50 backdrop-blur-md">
-//                 <h3 className="text-2xl font-bold mb-4 text-primary">Who I Am</h3>
-//                 <p className="text-muted-foreground leading-relaxed mb-4">
-//                   I'm a passionate Computer Science undergraduate at IIIT Kalyani, with a strong academic record 
-//                   and a keen interest in cutting-edge technologies like Quantum Computing, AI/ML, Generative AI, 
-//                   and Mixed Reality.
+//               <div className="gradient-border-content p-4 sm:p-6 md:p-8 rounded-lg bg-card/50 backdrop-blur-md">
+//                 <h3 className="text-xl sm:text-2xl font-bold mb-4 text-primary">Who I Am</h3>
+//                   <p className="text-sm sm:text-base text-muted-foreground leading-relaxed mb-4">
+//                     I'm a passionate Computer Science and Engineering Student at <span className="text-primary">IIIT Kalyani</span> and a keen interest in cutting-edge technologies like AI/ML, Generative AI, LLMs, Quantum Machine Learning, Quantum Cryptography
+//                     and Mixed Reality.
 //                 </p>
 //                 <p className="text-muted-foreground leading-relaxed mb-4">
 //                   Known for innovative projects like <span className="text-primary">WildGuard360</span> and 
@@ -84,33 +139,40 @@
 //             </div>
 //           </div>
 
-//           {/* Quick Stats */}
-//           <div className="space-y-6">
-//             <div className="grid grid-cols-2 gap-4">
-//               <Card className="p-6 text-center bg-card/60 border-primary/30 hover:border-primary/60 transition-colors backdrop-blur-md">
-//                 <div className="text-3xl font-bold text-primary mb-2">9.87</div>
-//                 <div className="text-sm text-muted-foreground">CGPA</div>
-//               </Card>
-//               <Card className="p-6 text-center bg-card/60 border-primary/30 hover:border-primary/60 transition-colors backdrop-blur-md">
-//                 <div className="text-3xl font-bold text-primary mb-2">2</div>
-//                 <div className="text-sm text-muted-foreground">Research Internships</div>
-//               </Card>
-//               <Card className="p-6 text-center bg-card/60 border-primary/30 hover:border-primary/60 transition-colors backdrop-blur-md">
-//                 <div className="text-3xl font-bold text-primary mb-2">3+</div>
-//                 <div className="text-sm text-muted-foreground">Major Projects</div>
-//               </Card>
-//               <Card className="p-6 text-center bg-card/60 border-primary/30 hover:border-primary/60 transition-colors backdrop-blur-md">
-//                 <div className="text-3xl font-bold text-primary mb-2">1</div>
-//                 <div className="text-sm text-muted-foreground">Publication</div>
-//               </Card>
-//             </div>
-//           </div>
+//           {/* Quick Stats - 2-1 Circle Layout with Links */}
+//           {/* Quick Stats - 2-1 Circle Layout with Links */}
+// <div className="flex flex-col items-center gap-10">
+//   {/* Top Row: 2 Circles */}
+//   <div className="flex flex-wrap justify-center gap-8 sm:gap-14">
+//     <a href="#education" className="group">
+//       <Card className="w-32 h-32 sm:w-40 sm:h-40 rounded-full flex flex-col items-center justify-center text-center bg-card/60 border-primary/30 hover:border-primary/60 hover:scale-105 transition-all duration-300 hover:glow-effect backdrop-blur-md">
+//         <div className="text-2xl sm:text-3xl font-bold text-primary group-hover:text-cyan-400 transition-colors">9.87</div>
+//         <div className="text-xs sm:text-sm text-muted-foreground mt-1">CGPA</div>
+//       </Card>
+//     </a>
+//     <a href="#experience" className="group">
+//       <Card className="w-32 h-32 sm:w-40 sm:h-40 rounded-full flex flex-col items-center justify-center text-center bg-card/60 border-primary/30 hover:border-primary/60 hover:scale-105 transition-all duration-300 hover:glow-effect backdrop-blur-md">
+//         <div className="text-2xl sm:text-3xl font-bold text-primary group-hover:text-cyan-400 transition-colors">2</div>
+//         <div className="text-xs sm:text-sm text-muted-foreground mt-1 text-center">Research Internships</div>
+//       </Card>
+//     </a>
+//   </div>
+
+//   {/* Bottom Row: Centered Circle */}
+//   <a href="#projects" className="group">
+//     <Card className="w-32 h-32 sm:w-40 sm:h-40 rounded-full flex flex-col items-center justify-center text-center bg-card/60 border-primary/30 hover:border-primary/60 hover:scale-105 transition-all duration-300 hover:glow-effect backdrop-blur-md">
+//       <div className="text-2xl sm:text-3xl font-bold text-primary group-hover:text-cyan-400 transition-colors">3+</div>
+//       <div className="text-xs sm:text-sm text-muted-foreground mt-1 text-center">Major Projects</div>
+//     </Card>
+//   </a>
+// </div>
+
 //         </div>
 
 //         {/* Education & Experience */}
 //         <div className="grid md:grid-cols-2 gap-12">
 //           {/* Education Section */}
-//           <div>
+//           <div id="education">
 //             <h3 className="text-2xl font-bold mb-6 text-primary">Education</h3>
 //             <div className="space-y-4">
 //               {education.map((edu, index) => (
@@ -130,7 +192,7 @@
 //           </div>
 
 //           {/* Experience Section */}
-//           <div>
+//           <div id="experience">
 //             <h3 className="text-2xl font-bold mb-6 text-primary">Experience</h3>
 //             <div className="space-y-4">
 //               {experience.map((exp, index) => (
@@ -148,11 +210,55 @@
 //           </div>
 //         </div>
 //       </div>
+
+//       {/* Right-side vertical social links */}
+//       <div className="fixed hidden md:flex flex-col right-6 lg:right-12 top-1/2 transform -translate-y-1/2 z-50 gap-4">
+//         {/* Google Scholar */}
+//         <a
+//           href="https://scholar.google.com/citations?user=fAZNyLIAAAAJ&hl=en"
+//           target="_blank"
+//           rel="noopener noreferrer"
+//           aria-label="Google Scholar"
+//           className="w-10 h-10 rounded-full flex items-center justify-center shadow-lg hover:scale-110 transition-transform"
+//           style={{ backgroundColor: '#4285F4' }}
+//         >
+//           <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" className="w-5 h-5 text-white fill-current">
+//             <path d="M12 2L1 7l11 5 9-4.09V17h2V7L12 2z" />
+//             <path d="M11 12.5v5.5h2v-5.5l-1-.45-1 .45z" />
+//           </svg>
+//         </a>
+
+//         {/* ORCID */}
+//         <a
+//           href="http://orcid.org/0009-0003-9619-8559"
+//           target="_blank"
+//           rel="noopener noreferrer"
+//           aria-label="ORCID"
+//           className="w-10 h-10 rounded-full flex items-center justify-center shadow-lg hover:scale-110 transition-transform"
+//           style={{ backgroundColor: '#A6CE39' }}
+//         >
+//           <img src="https://cdn.simpleicons.org/orcid/white" alt="ORCID" className="w-5 h-5" />
+//         </a>
+
+//         {/* Email */}
+//         <a
+//           href="mailto:prithwish2dey@gmail.com"
+//           aria-label="Email"
+//           className="w-10 h-10 rounded-full flex items-center justify-center shadow-lg hover:scale-110 transition-transform"
+//           style={{ backgroundColor: '#EA4335' }}
+//         >
+//           <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" className="w-5 h-5 text-white fill-current">
+//             <path d="M20 4H4c-1.1 0-2 .9-2 2v12c0 1.1 .9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z" />
+//           </svg>
+//         </a>
+//       </div>
+
 //     </section>
 //   );
 // };
 
 // export default About;
+
 
 
 
@@ -273,7 +379,7 @@ const About = () => {
     href="https://drive.google.com/file/d/14F1cFQa-8GuQVVvRNAFL9nkZGpVCo-19/view?usp=sharing"
     target="_blank"
     rel="noopener noreferrer"
-    className="px-4 py-2 border border-primary/30 rounded-full text-sm hover:border-primary hover:text-cyan-400 transition-all glow-effect"
+    className="px-4 py-2 rounded-full text-sm text-primary border border-primary/20 bg-primary/10 hover:bg-primary/20 transition-colors"
   >
     Resume
   </a>
@@ -281,7 +387,7 @@ const About = () => {
     href="https://github.com/prithwish2dey"
     target="_blank"
     rel="noopener noreferrer"
-    className="px-4 py-2 border border-primary/30 rounded-full text-sm hover:border-primary hover:text-cyan-400 transition-all glow-effect"
+    className="px-4 py-2 rounded-full text-sm text-primary border border-primary/20 bg-white/6 hover:bg-white/8 transition-colors"
   >
     GitHub
   </a>
@@ -289,7 +395,7 @@ const About = () => {
     href="https://www.linkedin.com/in/prithwish-dey-4655a8236/"
     target="_blank"
     rel="noopener noreferrer"
-    className="px-4 py-2 border border-primary/30 rounded-full text-sm hover:border-primary hover:text-cyan-400 transition-all glow-effect"
+    className="px-4 py-2 rounded-full text-sm text-primary border border-primary/20 bg-[#0A66C2]/10 hover:bg-[#0A66C2]/20 transition-colors"
   >
     LinkedIn
   </a>
@@ -297,7 +403,7 @@ const About = () => {
     href="https://www.codechef.com/users/dey_prithwish"
     target="_blank"
     rel="noopener noreferrer"
-    className="px-4 py-2 border border-primary/30 rounded-full text-sm hover:border-primary hover:text-cyan-400 transition-all glow-effect"
+    className="px-4 py-2 rounded-full text-sm text-primary border border-primary/20 bg-[#F26A14]/10 hover:bg-[#F26A14]/20 transition-colors"
   >
     CodeChef
   </a>
@@ -305,7 +411,7 @@ const About = () => {
     href="https://leetcode.com/u/Prithwish2Dey"
     target="_blank"
     rel="noopener noreferrer"
-    className="px-4 py-2 border border-primary/30 rounded-full text-sm hover:border-primary hover:text-cyan-400 transition-all glow-effect"
+    className="px-4 py-2 rounded-full text-sm text-primary border border-primary/20 bg-[#FFA116]/10 hover:bg-[#FFA116]/20 transition-colors"
   >
     LeetCode
   </a>
@@ -313,7 +419,7 @@ const About = () => {
     href="https://drive.google.com/file/d/11wv_kpxouELQrELUVXyHD19MQfumTUEq/view?usp=sharing"
     target="_blank"
     rel="noopener noreferrer"
-    className="px-4 py-2 border border-primary/30 rounded-full text-sm hover:border-primary hover:text-cyan-400 transition-all glow-effect"
+    className="px-4 py-2 rounded-full text-sm text-primary border border-primary/20 bg-primary/10 hover:bg-primary/20 transition-colors"
   >
     Certifications
   </a>
@@ -350,24 +456,24 @@ const About = () => {
   {/* Top Row: 2 Circles */}
   <div className="flex flex-wrap justify-center gap-8 sm:gap-14">
     <a href="#education" className="group">
-      <Card className="w-32 h-32 sm:w-40 sm:h-40 rounded-full flex flex-col items-center justify-center text-center bg-card/60 border-primary/30 hover:border-primary/60 hover:scale-105 transition-all duration-300 hover:glow-effect backdrop-blur-md">
-        <div className="text-2xl sm:text-3xl font-bold text-primary group-hover:text-cyan-400 transition-colors">9.87</div>
-        <div className="text-xs sm:text-sm text-muted-foreground mt-1">CGPA</div>
+      <Card className="w-44 h-44 sm:w-52 sm:h-52 rounded-full flex flex-col items-center justify-center text-center bg-card/60 border-primary/30 hover:border-primary/60 hover:scale-105 transition-all duration-300 hover:glow-effect backdrop-blur-md flex-shrink-0 min-w-[11rem]">
+        <div className="w-24 h-24 sm:w-28 sm:h-28 rounded-full bg-gradient-to-br from-pink-300 to-purple-400 flex items-center justify-center text-white font-bold text-3xl sm:text-4xl">9.89</div>
+        <div className="text-xs sm:text-sm text-primary mt-1 text-center whitespace-nowrap">CGPA</div>
       </Card>
     </a>
     <a href="#experience" className="group">
-      <Card className="w-32 h-32 sm:w-40 sm:h-40 rounded-full flex flex-col items-center justify-center text-center bg-card/60 border-primary/30 hover:border-primary/60 hover:scale-105 transition-all duration-300 hover:glow-effect backdrop-blur-md">
-        <div className="text-2xl sm:text-3xl font-bold text-primary group-hover:text-cyan-400 transition-colors">2</div>
-        <div className="text-xs sm:text-sm text-muted-foreground mt-1 text-center">Research Internships</div>
+      <Card className="w-44 h-44 sm:w-52 sm:h-52 rounded-full flex flex-col items-center justify-center text-center bg-card/60 border-primary/30 hover:border-primary/60 hover:scale-105 transition-all duration-300 hover:glow-effect backdrop-blur-md flex-shrink-0 min-w-[11rem]">
+        <div className="w-24 h-24 sm:w-28 sm:h-28 rounded-full bg-gradient-to-br from-emerald-300 to-lime-300 flex items-center justify-center text-white font-bold text-3xl sm:text-4xl">2</div>
+        <div className="text-xs sm:text-sm text-primary mt-1 text-center whitespace-nowrap">Research Internships</div>
       </Card>
     </a>
   </div>
 
   {/* Bottom Row: Centered Circle */}
   <a href="#projects" className="group">
-    <Card className="w-32 h-32 sm:w-40 sm:h-40 rounded-full flex flex-col items-center justify-center text-center bg-card/60 border-primary/30 hover:border-primary/60 hover:scale-105 transition-all duration-300 hover:glow-effect backdrop-blur-md">
-      <div className="text-2xl sm:text-3xl font-bold text-primary group-hover:text-cyan-400 transition-colors">3+</div>
-      <div className="text-xs sm:text-sm text-muted-foreground mt-1 text-center">Major Projects</div>
+    <Card className="w-44 h-44 sm:w-52 sm:h-52 rounded-full flex flex-col items-center justify-center text-center bg-card/60 border-primary/30 hover:border-primary/60 hover:scale-105 transition-all duration-300 hover:glow-effect backdrop-blur-md flex-shrink-0 min-w-[11rem]">
+      <div className="w-24 h-24 sm:w-28 sm:h-28 rounded-full bg-gradient-to-br from-cyan-200 to-blue-300 flex items-center justify-center text-white font-bold text-3xl sm:text-4xl">3+</div>
+      <div className="text-xs sm:text-sm text-primary mt-1 text-center whitespace-nowrap">Major Projects</div>
     </Card>
   </a>
 </div>
@@ -415,6 +521,49 @@ const About = () => {
           </div>
         </div>
       </div>
+
+      {/* Right-side vertical social links */}
+      <div className="fixed hidden md:flex flex-col right-6 lg:right-12 top-1/2 transform -translate-y-1/2 z-50 gap-4">
+        {/* Google Scholar */}
+        <a
+          href="https://scholar.google.com/citations?user=fAZNyLIAAAAJ&hl=en"
+          target="_blank"
+          rel="noopener noreferrer"
+          aria-label="Google Scholar"
+          className="w-10 h-10 rounded-full flex items-center justify-center shadow-lg hover:scale-110 transition-transform"
+          style={{ backgroundColor: '#4285F4' }}
+        >
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" className="w-5 h-5 text-white fill-current">
+            <path d="M12 2L1 7l11 5 9-4.09V17h2V7L12 2z" />
+            <path d="M11 12.5v5.5h2v-5.5l-1-.45-1 .45z" />
+          </svg>
+        </a>
+
+        {/* ORCID */}
+        <a
+          href="http://orcid.org/0009-0003-9619-8559"
+          target="_blank"
+          rel="noopener noreferrer"
+          aria-label="ORCID"
+          className="w-10 h-10 rounded-full flex items-center justify-center shadow-lg hover:scale-110 transition-transform"
+          style={{ backgroundColor: '#A6CE39' }}
+        >
+          <img src="https://cdn.simpleicons.org/orcid/white" alt="ORCID" className="w-5 h-5" />
+        </a>
+
+        {/* Email */}
+        <a
+          href="mailto:prithwish2dey@gmail.com"
+          aria-label="Email"
+          className="w-10 h-10 rounded-full flex items-center justify-center shadow-lg hover:scale-110 transition-transform"
+          style={{ backgroundColor: '#EA4335' }}
+        >
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" className="w-5 h-5 text-white fill-current">
+            <path d="M20 4H4c-1.1 0-2 .9-2 2v12c0 1.1 .9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z" />
+          </svg>
+        </a>
+      </div>
+
     </section>
   );
 };
