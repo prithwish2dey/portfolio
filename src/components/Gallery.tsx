@@ -51,8 +51,9 @@
 
 
 import React, { useState } from "react";
+import { Link } from "react-router-dom";
 
-const images = [
+export const galleryImages = [
   { src: "/images/sirs.jpeg", caption: "With Prof. Pradipta Biswas and Indian Astronaut Delegate, Group Captian Ajit Krishnan" },
   {src: "/images/sc1.jpg", caption: "Winner of STATUS CODE 1 Hackathon (Wildlife Track Prize )"},
   { src: "/images/IISc4.jpg", caption: "Internship at IISc Bangalore" },
@@ -67,8 +68,17 @@ const images = [
   { src: "/images/IISc_cricket2.jpg", caption: "IISc Cricket Match, 2025" }
 ];
 
-const Gallery = () => {
-  const [selectedImage, setSelectedImage] = useState<null | typeof images[0]>(null);
+type GalleryProps = {
+  preview?: boolean;
+  limit?: number;
+  query?: string;
+  hideHeader?: boolean;
+};
+
+const Gallery: React.FC<GalleryProps> = ({ preview = false, limit = 6, query = "", hideHeader = false }) => {
+  const [selectedImage, setSelectedImage] = useState<null | typeof galleryImages[0]>(null);
+  const filtered = query ? galleryImages.filter((g) => g.caption.toLowerCase().includes(query.trim().toLowerCase())) : galleryImages;
+  const imagesToShow = preview ? filtered.slice(0, limit) : filtered;
 
   return (
     <section
@@ -82,40 +92,55 @@ const Gallery = () => {
       <div className="absolute inset-0 bg-black/60 z-0"></div>
 
       {/* Section content */}
-      <div className="relative z-10 max-w-6xl mx-auto text-center mb-20">
-        <h2 className="text-4xl md:text-5xl font-bold mb-4 glow-text">
-          Project <span className="text-cyan-400">Gallery</span>
-        </h2>
-        <p className="text-gray-400 text-lg max-w-3xl mx-auto">
-          Glimpses from Achievements, conferences, and User Studies.
-        </p>
-      </div>
+      {!hideHeader && (
+        <div className="relative z-10 max-w-6xl mx-auto text-center mb-20">
+          <h2 className="text-4xl md:text-5xl font-bold mb-4 glow-text">
+            Project <span className="text-cyan-400">Gallery</span>
+          </h2>
+          <p className="text-gray-400 text-lg max-w-3xl mx-auto">
+            Glimpses from Achievements, conferences, and User Studies.
+          </p>
+        </div>
+      )}
 
       {/* Gallery Grid */}
       <div className="relative z-10 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10 max-w-6xl mx-auto">
-        {images.map((img, i) => (
-          <div
-            key={i}
-            onClick={() => setSelectedImage(img)}
-            className="relative group cursor-pointer overflow-hidden rounded-xl border border-cyan-500/20 shadow-lg transition-transform duration-300 hover:scale-105"
-          >
-            {/* Glow on hover */}
-            <div className="absolute inset-0 z-10 bg-cyan-400 opacity-0 group-hover:opacity-20 blur-2xl transition-opacity duration-500 pointer-events-none"></div>
+        {imagesToShow.length === 0 ? (
+          <div className="col-span-full text-center text-gray-400">No images found.</div>
+        ) : (
+          imagesToShow.map((img, i) => (
+            <div
+              key={i}
+              onClick={() => setSelectedImage(img)}
+              className="relative group cursor-pointer overflow-hidden rounded-xl border border-cyan-500/20 shadow-lg transition-transform duration-300 hover:scale-105"
+            >
+              {/* Glow on hover */}
+              <div className="absolute inset-0 z-10 bg-cyan-400 opacity-0 group-hover:opacity-20 blur-2xl transition-opacity duration-500 pointer-events-none"></div>
 
-            {/* Image */}
-            <img
-              src={img.src}
-              alt={img.caption}
-              className="w-full h-60 object-cover transition-transform duration-300 group-hover:scale-105"
-            />
+              {/* Image */}
+              <img
+                src={img.src}
+                alt={img.caption}
+                className="w-full h-60 object-cover transition-transform duration-300 group-hover:scale-105"
+              />
 
-            {/* Caption */}
-            <div className="relative z-20 p-4 text-center text-cyan-300 text-sm font-medium bg-black/50 backdrop-blur-sm border-t border-cyan-500/10">
-              {img.caption}
+              {/* Caption */}
+              <div className="relative z-20 p-4 text-center text-cyan-300 text-sm font-medium bg-black/50 backdrop-blur-sm border-t border-cyan-500/10">
+                {img.caption}
+              </div>
             </div>
-          </div>
-        ))}
+          ))
+        )}
       </div>
+
+      {/* Preview CTA */}
+      {preview && galleryImages.length > limit && (
+        <div className="relative z-10 max-w-6xl mx-auto mt-8 text-center">
+          <Link to="/gallery" className="inline-block px-6 py-3 rounded-full bg-gradient-to-r from-cyan-400 to-blue-500 text-white font-medium shadow-md hover:scale-105 transition-transform">
+            See full gallery
+          </Link>
+        </div>
+      )}
 
       {/* Lightbox Modal */}
       {selectedImage && (

@@ -182,15 +182,15 @@ const Index = () => {
         </section>
 
         <section id="projects" className="py-0">
-          <Projects />
+          <Projects preview limit={3} />
         </section>
 
         <section id="publications" className="py-0">
-          <Publications />
+          <Publications preview limit={3} />
         </section>
 
         <section id="gallery" className="py-0">
-          <Gallery />
+          <Gallery preview limit={6} />
         </section>
 
         <section id="contact" className="py-0">

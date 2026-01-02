@@ -273,8 +273,16 @@
 
 
 import { ExternalLink } from "lucide-react";
+import { Link } from "react-router-dom";
 
-const Projects = () => {
+type ProjectsProps = {
+  preview?: boolean;
+  limit?: number;
+  query?: string;
+  hideHeader?: boolean;
+};
+
+const Projects: React.FC<ProjectsProps> = ({ preview = false, limit = 3, query = "", hideHeader = false }) => {
   const projects = [
     {
       title: "Hybrid Quantum Model for DR Detection",
@@ -300,7 +308,25 @@ const Projects = () => {
       link: "https://wild-guard360.vercel.app",
       category: "Computer Vision",
     },
+    {
+      title: "OpenBase: Research Data Platform",
+      description: "A platform to collate, version and serve research datasets for reproducible experiments.",
+      tech: ["Node", "Postgres", "React"],
+      image: "/images/openbase.png",
+      link: "#",
+      category: "Data Platforms",
+    },
   ];
+
+  const normalized = (s: string) => s.toLowerCase();
+  const filteredProjects = projects.filter((p) => {
+    if (!query) return true;
+    const q = query.trim().toLowerCase();
+    const hay = [p.title, p.description, p.category, (p.tech || []).join(" ")].filter(Boolean).join(" ").toLowerCase();
+    return hay.includes(q);
+  });
+
+  const projectsToShow = preview ? filteredProjects.slice(0, limit) : filteredProjects;
 
   const DiamondCard = ({ project }: { project: any }) => (
     <div className="relative w-72 h-[500px] sm:w-96 sm:h-[420px] transform rotate-45 hover:scale-105 transition-transform duration-500">
@@ -352,27 +378,54 @@ const Projects = () => {
       <div className="absolute inset-0 bg-black/60 z-0"></div>
 
       {/* Content */}
-      <div className="relative z-10 max-w-7xl mx-auto text-center mb-20">
-        <h2 className="text-4xl md:text-5xl font-bold mb-4 glow-text">
-          Innovative <span className="text-cyan-400">Projects</span>
-        </h2>
-        <p className="text-gray-400 text-lg max-w-2xl mx-auto">
-          Building the future with AI/ML, QML and Computer Vision.
-        </p>
-      </div>
-
-      {/* Diamond Layout */}
-      <div className="relative z-10 flex flex-col items-center space-y-24">
-        {/* Top Row: Two diamonds */}
-        <div className="flex flex-wrap justify-center gap-24">
-          <DiamondCard project={projects[0]} />
-          <DiamondCard project={projects[1]} />
+      {!hideHeader && (
+        <div className="relative z-10 max-w-7xl mx-auto text-center mb-20">
+          <h2 className="text-4xl md:text-5xl font-bold mb-4 glow-text">
+            Innovative <span className="text-cyan-400">Projects</span>
+          </h2>
+          <p className="text-gray-400 text-lg max-w-2xl mx-auto">
+            Building the future with AI/ML, QML and Computer Vision.
+          </p>
         </div>
+      )}
 
-        {/* Bottom Row: Centered */}
-        <div className="mt-[-4rem]">
-          <DiamondCard project={projects[2]} />
-        </div>
+          {/* Diamond Layout */}
+      <div className="relative z-10 flex flex-col items-center space-y-12">
+        {/* Render based on number of projects to show */}
+        {projectsToShow.length === 1 && (
+          <div className="flex justify-center">
+            <DiamondCard project={projectsToShow[0]} />
+          </div>
+        )}
+
+        {projectsToShow.length === 2 && (
+          <div className="flex flex-wrap justify-center gap-24">
+            <DiamondCard project={projectsToShow[0]} />
+            <DiamondCard project={projectsToShow[1]} />
+          </div>
+        )}
+
+        {projectsToShow.length >= 3 && (
+          <>
+            <div className="flex flex-wrap justify-center gap-24">
+              <DiamondCard project={projectsToShow[0]} />
+              <DiamondCard project={projectsToShow[1]} />
+            </div>
+
+            <div className="mt-[-4rem]">
+              <DiamondCard project={projectsToShow[2]} />
+            </div>
+          </>
+        )}
+
+        {/* Preview CTA */}
+        {preview && projects.length > limit && (
+          <div className="mt-8">
+            <Link to="/projects" className="inline-flex items-center gap-3 px-6 py-3 rounded-full bg-gradient-to-r from-cyan-400 to-blue-500 text-white font-medium shadow-md hover:scale-105 transition-transform">
+              See all projects
+            </Link>
+          </div>
+        )}
       </div>
     </section>
   );
