@@ -1,189 +1,11 @@
-// import React from "react";
-// import { ExternalLink } from "lucide-react";
-// import { Button } from "@/components/ui/button";
-
-// const publications = [
-//   {
-//     title: "Hybrid Quantum Transfer Learning for DR Detection",
-//     conference: "International Conference on Signal Processing (ICSP 2024)",
-//     publisher: "Springer Book Chapter",
-//     link: "https://link.springer.com/example-paper1",
-//     summary:
-//       "A novel framework combining Quantum Transfer Learning and classical convolutional networks to improve diabetic retinopathy classification from fundus images.",
-//   },
-//   {
-//     title: "WildGuard360: A Vision-Based Wildlife Safety Platform",
-//     conference: "IEEE International Conference on Computer Vision Applications (ICCV-AI 2024)",
-//     publisher: "IEEE Xplore (Under Review)",
-//     link: "https://ieeexplore.ieee.org/example-paper2",
-//     summary:
-//       "An integrated wildlife monitoring system leveraging object detection, fire prediction, and pet recovery modules in edge-enabled environments.",
-//   },
-// ];
-
-// const Publications = () => {
-//   return (
-//     <section id="publications" className="py-24 px-4 bg-black text-white">
-//       <div className="max-w-6xl mx-auto text-center mb-20">
-//         <h2 className="text-4xl md:text-6xl font-bold mb-4">
-//           Research <span className="text-cyan-400">Publications</span>
-//         </h2>
-//         <p className="text-gray-400 text-lg max-w-3xl mx-auto">
-//           Peer-reviewed contributions to cutting-edge domains in Quantum ML and Computer Vision.
-//         </p>
-//       </div>
-
-//       <div className="space-y-16 max-w-4xl mx-auto">
-//         {publications.map((pub, index) => (
-//           <div
-//             key={index}
-//             className="bg-gradient-to-br from-gray-900 to-gray-800 rounded-xl p-8 shadow-xl border border-cyan-500/20 hover:border-cyan-400/40 transition duration-300"
-//           >
-//             <h3 className="text-2xl font-semibold text-cyan-300 mb-2">{pub.title}</h3>
-//             <p className="text-sm text-gray-400 mb-2 italic">{pub.conference} • {pub.publisher}</p>
-//             <p className="text-gray-300 mb-4">{pub.summary}</p>
-//             <Button
-//               variant="outline"
-//               className="text-xs border-cyan-400 text-cyan-300 hover:bg-cyan-500/10"
-//               asChild
-//             >
-//               <a href={pub.link} target="_blank" rel="noopener noreferrer">
-//                 <ExternalLink className="w-4 h-4 mr-1" />
-//                 Read Paper
-//               </a>
-//             </Button>
-//           </div>
-//         ))}
-//       </div>
-//     </section>
-//   );
-// };
-
-// export default Publications;
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-// import React from "react";
-// import { ExternalLink } from "lucide-react";
-// import { Button } from "@/components/ui/button";
-// import { motion } from "framer-motion";
-
-// const publications = [
-//   {
-//     title: "A Quantum Public Key Cryptographic Scheme using Entangled States and Grover Operator",
-//     authors: ["Soumen Bajpayee", "Sarbani Sen", "Prithwish Dey", "Dr. Imon Mukherjee"],
-//     conference: "ICSP Conference 2024",
-//     publisher: "Springer Book Chapter",
-//     link: "https://link.springer.com/chapter/10.1007/978-3-031-90587-2_12",
-//     summary:
-//       "A novel framework combining Quantum Transfer Learning and classical convolutional networks to improve diabetic retinopathy classification.",
-//   },
-//   // Add more papers here if needed
-// ];
-
-// const Publications = () => {
-//   return (
-//     <section
-//   id="publications"
-//   className="relative w-full py-24 px-6 text-white bg-cover bg-center bg-no-repeat"
-//   style={{
-//     backgroundImage: "url('/backgrounds/backpublication.webp')",
-//   }}
-// >
-//   {/* Dark overlay */}
-//   <div className="absolute inset-0 bg-black/70 z-0"></div>
-
-//   {/* Main content on top of overlay */}
-//   <div className="relative z-10 max-w-6xl mx-auto text-center mb-20">
-//     <motion.h2
-//       initial={{ opacity: 0, y: 40 }}
-//       whileInView={{ opacity: 1, y: 0 }}
-//       transition={{ duration: 0.6 }}
-//       className="text-4xl md:text-5xl font-bold mb-4 glow-text"
-//     >
-//       Research <span className="text-cyan-400">Publications</span>
-//     </motion.h2>
-//     <motion.p
-//       initial={{ opacity: 0 }}
-//       whileInView={{ opacity: 1 }}
-//       transition={{ delay: 0.3 }}
-//       className="text-gray-400 text-lg max-w-3xl mx-auto"
-//     >
-//       Peer-reviewed contributions in Quantum Cryptography.
-//     </motion.p>
-//   </div>
-
-//   {/* Cards */}
-//   <div className="relative z-10 space-y-16 max-w-4xl mx-auto">
-//     {publications.map((pub, index) => (
-//       <motion.div
-//         key={index}
-//         initial={{ opacity: 0, y: 30 }}
-//         whileInView={{ opacity: 1, y: 0 }}
-//         transition={{ duration: 0.5, delay: index * 0.2 }}
-//         className="bg-gradient-to-br from-gray-900 to-gray-800 rounded-xl p-8 shadow-xl border border-cyan-500/20 hover:border-cyan-400/40 transition duration-300"
-//       >
-//         <h3 className="text-2xl font-semibold text-cyan-300 mb-2">{pub.title}</h3>
-//         <p className="text-sm text-gray-400 mb-1">
-//           <span className="italic">Authors:</span> {pub.authors.join(", ")}
-//         </p>
-//         <p className="text-sm text-gray-400 mb-2 italic">
-//           {pub.conference} • {pub.publisher}
-//         </p>
-//         <p className="text-gray-300 mb-4">{pub.summary}</p>
-//         <Button
-//           variant="outline"
-//           className="text-xs border-cyan-400 text-cyan-300 hover:bg-cyan-500/10"
-//           asChild
-//         >
-//           <a href={pub.link} target="_blank" rel="noopener noreferrer">
-//             <ExternalLink className="w-4 h-4 mr-1" />
-//             Read Paper
-//           </a>
-//         </Button>
-//       </motion.div>
-//     ))}
-//   </div>
-// </section>
-
-//   );
-// };
-
-// export default Publications;
-
-
-
-
-
-
-
-
-
-
 
 
 import React from "react";
 import { ExternalLink, Award, BookOpen } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { motion } from "framer-motion";
+import { Link } from "react-router-dom";
+
 
 /* ---------------- DATA ---------------- */
 
@@ -202,7 +24,7 @@ export const journalPublications = [
       "/images/7.jpg"
     ],
     tags: ["HCI", "Multimodal", "User Study"],
-    published: "2025-07-10",
+    published: "2025-10-08",
     // summary: "Short summary of the journal paper.",
   },
 ];
@@ -227,7 +49,7 @@ export const conferencePublications = [
       "/images/6.jpg"
     ],
     tags: ["Quantum", "Cryptography"],
-    published: "2024-12-10",
+    published: "2025-05-23",
     // summary:
     //   "A novel framework combining Quantum Transfer Learning and classical convolutional networks to improve diabetic retinopathy classification.",
   },
@@ -252,7 +74,7 @@ export const conferencePublications = [
       "/images/1.jpg"
     ],
     tags: ["Medical", "Vision", "GenAI"],
-    published: "2025-03-01",
+    published: "2025-12-14",
     // summary:
     //   "A novel framework combining Quantum Transfer Learning and classical convolutional networks to improve diabetic retinopathy classification.",
   },
@@ -574,10 +396,18 @@ const Publications = ({ preview = false, limit = 2, hideHeader = false }: Public
 
         {preview && (
           <div className="text-center mt-8">
-            <a href="/publications" className="inline-flex items-center gap-3 px-6 py-3 rounded-full bg-gradient-to-r from-cyan-400 to-blue-500 text-white font-medium shadow-md hover:scale-105 transition-transform">
+            {/* <a href="/publications" className="inline-flex items-center gap-3 px-6 py-3 rounded-full bg-gradient-to-r from-cyan-400 to-blue-500 text-white font-medium shadow-md hover:scale-105 transition-transform">
               See all publications
               <span className="transform transition-transform group-hover:translate-x-1">→</span>
-            </a>
+            </a> */}
+
+            <Link
+              to="/publications"
+              className="inline-flex items-center gap-3 px-6 py-3 rounded-full bg-gradient-to-r from-cyan-400 to-blue-500 text-white font-medium shadow-md hover:scale-105 transition-transform"
+            >
+              See all publications
+            </Link>
+
           </div>
         )}
       </div>
@@ -586,3 +416,262 @@ const Publications = ({ preview = false, limit = 2, hideHeader = false }: Public
 };
 
 export default Publications;
+
+
+
+
+
+
+
+
+
+
+// import React from "react";
+// import { ExternalLink } from "lucide-react";
+// import { motion } from "framer-motion";
+
+// /* ======================================================
+//    DATA (NOT EXPORTED — IMPORTANT FOR VITE FAST REFRESH)
+// ====================================================== */
+
+// const journalPublications = [
+//   {
+//     title:
+//       "Studying Human Modality Preferences in a Human-Drone Framework for Secondary Task Selection",
+//     authors: [
+//       "Suprakas Saren",
+//       "Rubini Mariyappan",
+//       "Prithwish Dey",
+//       "Debasish Ghose",
+//       "Pradipta Biswas",
+//     ],
+//     journal: "Journal on Multimodal User Interfaces",
+//     publisher: "Springer",
+//     link: "https://link.springer.com/article/10.1007/s12193-025-00462-3",
+//     published: "2025-07-10",
+//     tags: ["HCI", "Multimodal", "User Study"],
+//     authorImages: [
+//       "/images/12.jpeg",
+//       "/images/13.jpeg",
+//       "/images/3.jpg",
+//       "/images/9.jpg",
+//       "/images/7.jpg",
+//     ],
+//   },
+// ];
+
+// const conferencePublications = [
+//   {
+//     title:
+//       "A Quantum Public Key Cryptographic Scheme using Entangled States and Grover Operator",
+//     authors: [
+//       "Soumen Bajpayee",
+//       "Sarbani Sen",
+//       "Prithwish Dey",
+//       "Dr. Imon Mukherjee",
+//     ],
+//     conference: "ICSP Conference 2024",
+//     publisher: "Springer Book Chapter",
+//     link: "https://link.springer.com/chapter/10.1007/978-3-031-90587-2_12",
+//     published: "2024-12-10",
+//     tags: ["Quantum", "Cryptography"],
+//     authorImages: [
+//       "/images/8.jpg",
+//       "/images/10.jpg",
+//       "/images/3.jpg",
+//       "/images/6.jpg",
+//     ],
+//   },
+//   {
+//     title:
+//       "LLaVA-TB: A Large Language and Vision Assistant for Tuberculosis Detection from Chest X-Rays",
+//     authors: [
+//       "Zaina Akhter",
+//       "Iffat Jabin",
+//       "Prithwish Dey",
+//       "Mukund Mitra",
+//       "Dr. Abhishek Mukhopadhyay",
+//     ],
+//     conference: "CVIP Conference 2025",
+//     publisher: "Springer Book Chapter",
+//     link: "#",
+//     published: "2025-03-01",
+//     tags: ["Medical", "Vision", "GenAI"],
+//     authorImages: [
+//       "/images/5.jpg",
+//       "/images/4.jpg",
+//       "/images/3.jpg",
+//       "/images/2.jpg",
+//       "/images/1.jpg",
+//     ],
+//   },
+// ];
+
+// /* ======================================================
+//    HELPERS
+// ====================================================== */
+
+// const sortByDate = (arr: any[]) =>
+//   [...arr].sort(
+//     (a, b) => new Date(b.published).getTime() - new Date(a.published).getTime()
+//   );
+
+// const getInitials = (name: string) =>
+//   name
+//     .split(" ")
+//     .slice(0, 2)
+//     .map((n) => n[0])
+//     .join("")
+//     .toUpperCase();
+
+// /* ======================================================
+//    CARD COMPONENT
+// ====================================================== */
+
+// const PublicationCard = ({ pub }: { pub: any }) => (
+//   <motion.div
+//     initial={{ opacity: 0, y: 25 }}
+//     whileInView={{ opacity: 1, y: 0 }}
+//     transition={{ duration: 0.4 }}
+//     className="bg-gradient-to-br from-gray-900 to-gray-800 rounded-xl p-5 md:p-7 border border-cyan-500/10 shadow-lg hover:-translate-y-1 transition"
+//   >
+//     <h3 className="text-base md:text-lg font-semibold text-cyan-400">
+//       {pub.title}
+//     </h3>
+
+//     <p className="mt-1 text-xs md:text-sm text-gray-400">
+//       {pub.conference || pub.journal} • {pub.publisher}
+//     </p>
+
+//     {/* Authors */}
+//     <div className="mt-3 flex items-center gap-2 flex-wrap">
+//       {pub.authorImages?.slice(0, 5).map((img: string, i: number) => (
+//         <img
+//           key={i}
+//           src={img}
+//           className="w-8 h-8 rounded-full object-cover border border-black/30"
+//         />
+//       ))}
+//       {!pub.authorImages &&
+//         pub.authors.slice(0, 5).map((a: string, i: number) => (
+//           <div
+//             key={i}
+//             className="w-8 h-8 rounded-full bg-cyan-700 text-white text-xs flex items-center justify-center"
+//           >
+//             {getInitials(a)}
+//           </div>
+//         ))}
+//     </div>
+
+//     <p className="mt-3 text-xs md:text-sm text-gray-300">
+//       <span className="italic">Authors:</span>{" "}
+//       {pub.authors.map((a: string, i: number) => (
+//         <span
+//           key={i}
+//           className={`${
+//             a === "Prithwish Dey"
+//               ? "text-cyan-400 font-semibold"
+//               : ""
+//           }`}
+//         >
+//           {a}
+//           {i < pub.authors.length - 1 && ", "}
+//         </span>
+//       ))}
+//     </p>
+
+//     <div className="mt-4 flex justify-between items-center">
+//       <span className="text-xs bg-cyan-800/40 text-cyan-200 px-2 py-1 rounded-full">
+//         {new Date(pub.published).toLocaleDateString("en-US", {
+//           month: "short",
+//           year: "numeric",
+//         })}
+//       </span>
+
+//       {pub.link && pub.link !== "#" && (
+//         <a
+//           href={pub.link}
+//           target="_blank"
+//           rel="noopener noreferrer"
+//           className="inline-flex items-center gap-2 text-sm bg-gradient-to-r from-cyan-400 to-blue-500 px-3 py-1.5 rounded-full text-black font-medium hover:scale-105 transition"
+//         >
+//           <ExternalLink size={14} /> Read
+//         </a>
+//       )}
+//     </div>
+//   </motion.div>
+// );
+
+// /* ======================================================
+//    MAIN COMPONENT
+// ====================================================== */
+
+// const Publications = ({ preview = false, limit = 2 }: any) => {
+//   const [tab, setTab] = React.useState<"all" | "conference" | "journal">("all");
+
+//   const allPublications = sortByDate([
+//     ...conferencePublications,
+//     ...journalPublications,
+//   ]);
+
+//   const visible =
+//     tab === "all"
+//       ? allPublications
+//       : tab === "conference"
+//       ? sortByDate(conferencePublications)
+//       : sortByDate(journalPublications);
+
+//   const list = preview ? visible.slice(0, limit) : visible;
+
+//   return (
+//     <section className="py-20 px-4 md:px-6 bg-black text-white">
+//       <div className="max-w-7xl mx-auto">
+//         <h2 className="text-3xl md:text-5xl font-bold text-center mb-4">
+//           Research <span className="text-cyan-400">Publications</span>
+//         </h2>
+
+//         <p className="text-center text-gray-400 text-sm md:text-lg mb-8">
+//           GenAI · Computer Vision · MR · Quantum Cryptography
+//         </p>
+
+//         {/* Tabs */}
+//         <div className="flex justify-center gap-2 mb-8 flex-wrap">
+//           {["all", "conference", "journal"].map((t) => (
+//             <button
+//               key={t}
+//               onClick={() => setTab(t as any)}
+//               className={`px-4 py-1.5 rounded-full text-sm transition ${
+//                 tab === t
+//                   ? "bg-cyan-400 text-black"
+//                   : "border border-cyan-600/30"
+//               }`}
+//             >
+//               {t.charAt(0).toUpperCase() + t.slice(1)}
+//             </button>
+//           ))}
+//         </div>
+
+//         {/* Grid */}
+//         <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+//           {list.map((p, i) => (
+//             <PublicationCard key={i} pub={p} />
+//           ))}
+//         </div>
+
+//         {/* CTA */}
+//         {preview && (
+//           <div className="text-center mt-10">
+//             <a
+//               href="/publications"
+//               className="inline-block bg-gradient-to-r from-cyan-400 to-blue-500 px-6 py-3 rounded-full font-medium hover:scale-105 transition"
+//             >
+//               See all publications →
+//             </a>
+//           </div>
+//         )}
+//       </div>
+//     </section>
+//   );
+// };
+
+// export default Publications;
