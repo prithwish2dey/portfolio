@@ -22,41 +22,21 @@ const Contact = () => {
     setFormData(prev => ({ ...prev, [name]: value }));
   };
 
-  const [sending, setSending] = useState(false);
-
-  const handleSubmit = async (e: React.FormEvent) => {
+  const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
-    setSending(true);
 
-    try {
-      const res = await fetch('/api/send-message', {
-        method: 'POST',
-        headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify(formData),
-      });
+    const mailtoLink = `mailto:prithwish2dey@gmail.com?subject=${encodeURIComponent(formData.subject)}&body=${encodeURIComponent(
+      `Name: ${formData.name}\nEmail: ${formData.email}\n\nMessage:\n${formData.message}`
+    )}`;
 
-      if (res.ok) {
-        toast({
-          title: 'Message sent!',
-          description: 'Thanks — I will get back to you soon.',
-        });
-        setFormData({ name: '', email: '', subject: '', message: '' });
-      } else {
-        const data = await res.json();
-        toast({
-          title: 'Failed to send message',
-          description: data?.error || 'Please try again later.',
-        });
-      }
-    } catch (error) {
-      console.error(error);
-      toast({
-        title: 'Error',
-        description: 'Network error. Please try again later.',
-      });
-    } finally {
-      setSending(false);
-    }
+    window.location.href = mailtoLink;
+
+    toast({
+      title: "Opening email client...",
+      description: "Your default email client will open with the message pre-filled.",
+    });
+
+    setFormData({ name: '', email: '', subject: '', message: '' });
   };
 
   const contactInfo = [
@@ -182,17 +162,10 @@ const Contact = () => {
 
               <Button 
                 type="submit" 
-                className="w-full glow-effect hover:scale-105 transition-transform" 
-                disabled={sending}
+                className="w-full glow-effect hover:scale-105 transition-transform"
               >
-                {sending ? (
-                  'Sending...'
-                ) : (
-                  <>
-                    <Mail className="h-4 w-4 mr-2" />
-                    Send Message
-                  </>
-                )}
+                <Mail className="h-4 w-4 mr-2" />
+                Send Message
               </Button>
             </form>
           </Card>

@@ -17,7 +17,7 @@ export default async function handler(req, res) {
     return res.status(400).json({ error: 'Missing fields' });
   }
 
-  const toEmail = process.env.TO_EMAIL || 'prithwish2dey@gmail.com';
+  const toEmail = process.env.TO_EMAIL || 'sender2receiver24@gmail.com';
   const fromEmail = process.env.FROM_EMAIL || 'no-reply@yourdomain.com';
 
   // Prefer SMTP if configured
