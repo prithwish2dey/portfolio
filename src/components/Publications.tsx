@@ -576,7 +576,7 @@ const Publications = ({ preview = false, limit = 2, hideHeader = false }: Public
           <div className="text-center mt-8">
             <a href="/publications" className="inline-flex items-center gap-3 px-6 py-3 rounded-full bg-gradient-to-r from-cyan-400 to-blue-500 text-white font-medium shadow-md hover:scale-105 transition-transform">
               See all publications
-              {/* <span className="transform transition-transform group-hover:translate-x-1">→</span> */}
+              <span className="transform transition-transform group-hover:translate-x-1">→</span>
             </a>
           </div>
         )}
