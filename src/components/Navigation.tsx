@@ -127,7 +127,7 @@ const Navigation = ({ activeSection }: NavigationProps) => {
     { id: 'projects', label: 'Projects' },
     { id: 'publications', label: 'Publications' },
     { id: 'gallery', label: 'Gallery' },
-    { id: 'Demos', label: 'Videos', to: '/videos' },
+    { id: 'demos', label: 'Videos', to: '/videos' },
     { id: 'contact', label: 'Contact' },
   ];
 
