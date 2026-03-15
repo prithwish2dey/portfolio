@@ -7,7 +7,9 @@ import Index from "./pages/Index";
 import PublicationsPage from "./pages/PublicationsPage";
 import ProjectsPage from "./pages/ProjectsPage";
 import GalleryPage from "./pages/GalleryPage";
+import VideosPage from "./pages/VideosPage";
 import NotFound from "./pages/NotFound";
+import Robot from "./components/Robot";
 
 
 const queryClient = new QueryClient();
@@ -23,10 +25,12 @@ const App = () => (
           <Route path="/publications" element={<PublicationsPage />} />
           <Route path="/projects" element={<ProjectsPage />} />
           <Route path="/gallery" element={<GalleryPage />} />
+          <Route path="/videos" element={<VideosPage />} />
           {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
           <Route path="*" element={<NotFound />} />
         </Routes>
       </BrowserRouter>
+      <Robot />
     </TooltipProvider>
   </QueryClientProvider>
 );
