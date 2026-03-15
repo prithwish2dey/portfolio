@@ -5,17 +5,17 @@ const videos = [
   {
     title: 'Project Demo: Smart Home Dashboard',
     description: 'A quick walkthrough of the Smart Home Dashboard UI, showing real-time sensor updates and voice-command integration.',
-    url: 'https://www.youtube.com/embed/dQw4w9WgXcQ',
+    url: 'https://youtu.be/UcblWPFb-ig',
   },
   {
     title: 'AI Model Training Pipeline',
     description: 'Overview of the full training pipeline, from data ingestion to model deployment and monitoring.',
-    url: 'https://www.youtube.com/embed/oHg5SJYRHA0',
+    url: 'https://www.youtube.com/watch?v=0zCT_Dw0p3E',
   },
   {
     title: 'XR Prototype Interaction Demo',
     description: 'Interactive demo of the XR prototype demo, highlighting gesture controls and augmented overlays.',
-    url: 'https://www.youtube.com/embed/tVj0ZTS4WF4',
+    url: 'https://indianinstituteofscience-my.sharepoint.com/:v:/g/personal/mukundmitra_iisc_ac_in/EZLCURJ8k6RAhAhQJFeRUGkBePhy3gf7-U_RTljz1sk6Bg?nav=eyJyZWZlcnJhbEluZm8iOnsicmVmZXJyYWxBcHAiOiJPbmVEcml2ZUZvckJ1c2luZXNzIiwicmVmZXJyYWxBcHBQbGF0Zm9ybSI6IldlYiIsInJlZmVycmFsTW9kZSI6InZpZXciLCJyZWZlcnJhbFZpZXciOiJNeUZpbGVzTGlua0NvcHkifX0&e=I48WmN&referrer=Outlook.Desktop&referrerScenario=email-linkwithembed',
   },
 ];
 
