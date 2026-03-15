@@ -3,12 +3,12 @@ import { Link } from 'react-router-dom';
 
 const videos = [
   {
-    title: 'Project Demo: Smart Home Dashboard',
+    title: 'LLaVA-TB: A Vision-Language Assistant for Pulmonary TB Diagnosis Using Chest X-rays and GenAI',
     description: 'A quick walkthrough of the Smart Home Dashboard UI, showing real-time sensor updates and voice-command integration.',
     url: 'https://youtu.be/UcblWPFb-ig',
   },
   {
-    title: 'AI Model Training Pipeline',
+    title: 'Human-Drone Framework for Secondary Task Selection',
     description: 'Overview of the full training pipeline, from data ingestion to model deployment and monitoring.',
     url: 'https://www.youtube.com/watch?v=0zCT_Dw0p3E',
   },
