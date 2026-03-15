@@ -13,7 +13,7 @@ const videos = [
     url: 'https://www.youtube.com/watch?v=0zCT_Dw0p3E',
   },
   {
-    title: 'XR Prototype Interaction Demo',
+    title: 'Manipulator Teleoperation',
     description: 'Interactive demo of the XR prototype demo, highlighting gesture controls and augmented overlays.',
     url: 'https://indianinstituteofscience-my.sharepoint.com/:v:/g/personal/mukundmitra_iisc_ac_in/EZLCURJ8k6RAhAhQJFeRUGkBePhy3gf7-U_RTljz1sk6Bg?nav=eyJyZWZlcnJhbEluZm8iOnsicmVmZXJyYWxBcHAiOiJPbmVEcml2ZUZvckJ1c2luZXNzIiwicmVmZXJyYWxBcHBQbGF0Zm9ybSI6IldlYiIsInJlZmVycmFsTW9kZSI6InZpZXciLCJyZWZlcnJhbFZpZXciOiJNeUZpbGVzTGlua0NvcHkifX0&e=I48WmN&referrer=Outlook.Desktop&referrerScenario=email-linkwithembed',
   },
