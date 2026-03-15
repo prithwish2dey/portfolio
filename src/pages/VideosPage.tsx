@@ -1,38 +1,48 @@
-import React from 'react';
-import { Link } from 'react-router-dom';
+import React from "react";
+import { Link } from "react-router-dom";
 
 const videos = [
   {
-    title: 'LLaVA-TB: A Vision-Language Assistant for Pulmonary TB Diagnosis Using Chest X-rays and GenAI',
-    description: 'A quick walkthrough of the Smart Home Dashboard UI, showing real-time sensor updates and voice-command integration.',
-    url: 'https://www.youtube.com/embed/UcblWPFb-ig',
+    title:
+      "LLaVA-TB: A Vision-Language Assistant for Pulmonary TB Diagnosis Using Chest X-rays and GenAI",
+    description:
+      "A quick walkthrough of the Smart Home Dashboard UI, showing real-time sensor updates and voice-command integration.",
+    url: "https://www.youtube.com/embed/UcblWPFb-ig",
   },
   {
-    title: 'Human-Drone Framework for Secondary Task Selection',
-    description: 'Overview of the full training pipeline, from data ingestion to model deployment and monitoring.',
-    url: 'https://www.youtube.com/embed/0zCT_Dw0p3E',
+    title: "Human-Drone Framework for Secondary Task Selection",
+    description:
+      "Overview of the full training pipeline, from data ingestion to model deployment and monitoring.",
+    url: "https://www.youtube.com/embed/0zCT_Dw0p3E",
   },
   {
-    title: 'Manipulator Teleoperation',
-    description: 'Interactive demo of the XR prototype demo, highlighting gesture controls and augmented overlays.',
-    url: 'https://indianinstituteofscience-my.sharepoint.com/:v:/g/personal/mukundmitra_iisc_ac_in/EZLCURJ8k6RAhAhQJFeRUGkBePhy3gf7-U_RTljz1sk6Bg',
+    title: "Manipulator Teleoperation",
+    description:
+      "Interactive demo of the XR prototype demo, highlighting gesture controls and augmented overlays.",
+    url: "https://indianinstituteofscience-my.sharepoint.com/:v:/g/personal/mukundmitra_iisc_ac_in/EZLCURJ8k6RAhAhQJFeRUGkBePhy3gf7-U_RTljz1sk6Bg",
   },
 ];
 
 const VideosPage = () => {
   return (
-    <div className="min-h-screen bg-cover bg-center bg-no-repeat relative" style={{ backgroundImage: "url('/backgrounds/backgallery.jpg')" }}>
-      {/* Overlay for better text visibility */}
+    <div
+      className="min-h-screen bg-cover bg-center bg-no-repeat relative"
+      style={{ backgroundImage: "url('/backgrounds/backgallery.jpg')" }}
+    >
+      {/* Overlay */}
       <div className="absolute inset-0 bg-black/40"></div>
 
       <div className="relative z-10 max-w-6xl mx-auto px-6 py-12">
+        {/* Header */}
         <div className="mb-10 text-center">
           <h1 className="text-4xl md:text-5xl font-extrabold bg-gradient-to-r from-cyan-400 via-purple-400 to-pink-400 bg-clip-text text-transparent drop-shadow-2xl animate-pulse">
             Project Demos
           </h1>
+
           <p className="text-xl text-gray-200 mt-4 drop-shadow-lg">
             Watch immersive demos for each project and dive into the details.
           </p>
+
           <div className="mt-6">
             <Link
               to="/"
@@ -43,40 +53,44 @@ const VideosPage = () => {
           </div>
         </div>
 
+        {/* Video Grid */}
         <div className="grid gap-8 lg:grid-cols-2 xl:grid-cols-3">
           {videos.map((video, index) => (
             <div
               key={video.title}
-              className="group relative rounded-3xl border border-white/20 bg-white/10 backdrop-blur-lg p-6 shadow-2xl hover:shadow-[0_0_30px_rgba(6,182,212,0.3)] transition-all duration-500 hover:scale-105 animate-fade-in"
+              className="group relative rounded-3xl border border-white/20 bg-white/10 backdrop-blur-lg p-6 shadow-2xl hover:shadow-[0_0_30px_rgba(6,182,212,0.3)] transition-all duration-500 hover:scale-105"
               style={{ animationDelay: `${index * 0.2}s` }}
             >
+              {/* Video Container */}
               <div className="aspect-video w-full overflow-hidden rounded-2xl bg-black/20">
-              {video.url.includes("youtube") ? (
-                <iframe
-                  className="h-full w-full"
-                  src={video.url}
-                  title={video.title}
-                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                  allowFullScreen
-                />
-              ) : (
-                <div className="flex items-center justify-center h-full">
-                  <a
-                    href={video.url}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="text-white bg-cyan-500 px-6 py-3 rounded-lg hover:bg-cyan-600"
-                  >
-                    Watch Video
-                  </a>
-                </div>
-              )}
-            </div>
+                {video.url.includes("youtube") ? (
+                  <iframe
+                    className="h-full w-full"
+                    src={video.url}
+                    title={video.title}
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                    allowFullScreen
+                  />
+                ) : (
+                  <div className="flex items-center justify-center h-full">
+                    <a
+                      href={video.url}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="text-white bg-cyan-500 px-6 py-3 rounded-lg hover:bg-cyan-600 transition"
+                    >
+                      Watch Video
+                    </a>
+                  </div>
+                )}
               </div>
+
+              {/* Text Section */}
               <div className="mt-6">
                 <h2 className="text-2xl font-bold text-white drop-shadow-lg group-hover:text-cyan-300 transition-colors duration-300">
                   {video.title}
                 </h2>
+
                 <p className="text-white/80 mt-3 leading-relaxed drop-shadow-md">
                   {video.description}
                 </p>
@@ -90,4 +104,3 @@ const VideosPage = () => {
 };
 
 export default VideosPage;
-
