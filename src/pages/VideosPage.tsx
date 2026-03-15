@@ -51,6 +51,7 @@ const VideosPage = () => {
               style={{ animationDelay: `${index * 0.2}s` }}
             >
               <div className="aspect-video w-full overflow-hidden rounded-2xl bg-black/20">
+              {video.url.includes("youtube") ? (
                 <iframe
                   className="h-full w-full"
                   src={video.url}
@@ -58,6 +59,19 @@ const VideosPage = () => {
                   allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
                   allowFullScreen
                 />
+              ) : (
+                <div className="flex items-center justify-center h-full">
+                  <a
+                    href={video.url}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="text-white bg-cyan-500 px-6 py-3 rounded-lg hover:bg-cyan-600"
+                  >
+                    Watch Video
+                  </a>
+                </div>
+              )}
+            </div>
               </div>
               <div className="mt-6">
                 <h2 className="text-2xl font-bold text-white drop-shadow-lg group-hover:text-cyan-300 transition-colors duration-300">
