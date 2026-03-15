@@ -100,12 +100,14 @@
 import { useState, useEffect } from 'react';
 import { Menu, X } from 'lucide-react';
 import { Button } from "@/components/ui/button";
+import { useNavigate } from 'react-router-dom';
 
 interface NavigationProps {
   activeSection: string;
 }
 
 const Navigation = ({ activeSection }: NavigationProps) => {
+  const navigate = useNavigate();
   const [isScrolled, setIsScrolled] = useState(false);
   const [isMenuOpen, setIsMenuOpen] = useState(false);
 
@@ -125,10 +127,17 @@ const Navigation = ({ activeSection }: NavigationProps) => {
     { id: 'projects', label: 'Projects' },
     { id: 'publications', label: 'Publications' },
     { id: 'gallery', label: 'Gallery' },
+    { id: 'videos', label: 'Videos', to: '/videos' },
     { id: 'contact', label: 'Contact' },
   ];
 
-  const scrollToSection = (sectionId: string) => {
+  const scrollToSection = (sectionId: string, to?: string) => {
+    if (to) {
+      navigate(to);
+      setIsMenuOpen(false);
+      return;
+    }
+
     const element = document.getElementById(sectionId);
     if (element) {
       element.scrollIntoView({ behavior: 'smooth' });
@@ -153,7 +162,7 @@ const Navigation = ({ activeSection }: NavigationProps) => {
               <Button
                 key={item.id}
                 variant={activeSection === item.id ? "default" : "ghost"}
-                onClick={() => scrollToSection(item.id)}
+                onClick={() => scrollToSection(item.id, item.to)}
                 className={`transition-all duration-300 ${
                   activeSection === item.id 
                     ? 'glow-effect text-primary-foreground' 
